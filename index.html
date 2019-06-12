@@ -3,35 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <title>Document</title>
-
     <link rel="stylesheet" href="/assets/style.css" />
   </head>
   <body>
     <header>
-      <div class="content">
+      <div class="header-container">
         <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
+          <ul class="menu-left-part">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#blog">Blog</a></li>
           </ul>
         </nav>
-        <div class="logo">
-          <img src="img/logo.png" alt="logo" />
-          <p>Expire</p>
-        </div>
+        <a href="#">
+          <div class="logo">
+            <img src="img/logo.png" alt="logo" />
+            <p>Expire</p>
+          </div>
+        </a>
         <nav>
-          <ul>
+          <ul class="menu-right-part">
             <li><a href="#">Pages</a></li>
             <li><a href="#">About us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#feedback">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <section class="slider">
+    <section class="slider" id="home">
       <div class="content">
+        <div class="left-arrow"></div>
         <div class="slide">
           <h1>Expire</h1>
           <p>Professionaly designed, carefully made for your enjoyement</p>
@@ -88,7 +90,7 @@
       </div>
     </section>
 
-    <section class="latest-blog-post">
+    <section class="latest-blog-post" id="blog">
       <div class="content">
         <div class="content__header">
           <h2>Latest blog post</h2>
@@ -103,14 +105,14 @@
             <div class="posts">
               <div class="posts__item">
                 <h3><a href="">Just another blog post</a></h3>
-                <div class="posts__item__info">
+                <div class="posts__info">
                   <ul>
                     <li>By Author</li>
                     <li>9 November 2014</li>
                     <li>3</li>
                   </ul>
                 </div>
-                <div class="posts__item__description">
+                <div class="posts____description">
                   <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex
                     vel ipsam provident rerum vitae deleniti tenetur alias!
@@ -121,14 +123,14 @@
               </div>
               <div class="posts__item">
                 <h3><a href="">Blog Post With Youtube video</a></h3>
-                <div class="posts__item__info">
+                <div class="posts__info">
                   <ul>
                     <li>By Author</li>
                     <li>29 December 2014</li>
                     <li>1</li>
                   </ul>
                 </div>
-                <div class="posts__item__description">
+                <div class="posts__description">
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
                     officiis numquam tenetur dicta mollitia nulla modi eaque
@@ -140,14 +142,14 @@
               </div>
               <div class="posts__item">
                 <h3><a href="">This Could be Great</a></h3>
-                <div class="posts__item__info">
+                <div class="posts__info">
                   <ul>
                     <li>By Author</li>
                     <li>10 June 2014</li>
                     <li>0</li>
                   </ul>
                 </div>
-                <div class="posts__item__description">
+                <div class="posts__description">
                   <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Possimus eligendi corrupti earum suscipit repellendus
@@ -162,7 +164,7 @@
       </div>
     </section>
 
-    <section class="latest-portfolio">
+    <section class="latest-portfolio" id="portfolio">
       <div class="content">
         <div class="content_header">
           <h2>Latest portfolio</h2>
@@ -236,7 +238,7 @@
       </div>
     </section>
 
-    <section class="feedback">
+    <section class="feedback" id="feedback">
       <div class="content">
         <div class="content__header">
           <h2>Get to know us better</h2>
@@ -248,16 +250,16 @@
         <div class="content__main">
           <div class="contact">
             <div class="contact__location">
-              <div class="contact__location__icon"></div>
-              <div class="contact__location__info"></div>
+              <div class="contact__icon"></div>
+              <div class="contact__info"></div>
             </div>
             <div class="contact__email">
-              <div class="contact__email__icon"></div>
-              <div class="contact__email__info"></div>
+              <div class="contact__icon"></div>
+              <div class="contact__info"></div>
             </div>
             <div class="contact__phone">
-              <div class="contact__phone__icon"></div>
-              <div class="contact__phone__info"></div>
+              <div class="contact__icon"></div>
+              <div class="contact__info"></div>
             </div>
           </div>
           <div class="feedback-form">
