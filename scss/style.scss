@@ -1,6 +1,8 @@
-@import "vendor/reset";
-
+@import "fonts";
 @import "variables";
+@import "vendor/reset";
 @import "typography";
-
+@import "common";
 // import components here
+@import "components/header";
+@import "components/slider";
