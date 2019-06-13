@@ -110,12 +110,12 @@ a {
 
 header {
   background: #3d4148;
-  color: #fafafa;
-  font-family: "Raleway";
+  color: #fffafa;
+  font-family: "Raleway", sans-serif;
 }
 
 header a {
-  color: #fafafa;
+  color: #fffafa;
 }
 
 header ul {

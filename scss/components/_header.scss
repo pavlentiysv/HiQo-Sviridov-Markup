@@ -1,7 +1,7 @@
 header {
   background: $color-header-gray;
   color: $color-header-text;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
 
   a {
     color: $color-header-text;
@@ -27,9 +27,13 @@ header {
         width: 100%;
         height: 1px;
         position: absolute;
-        bottom: 0px;
-        left: 0px;
-        background: linear-gradient(to right, #902616, #fe3c1f);
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(
+          to right,
+          $color-gradient-left,
+          $color-gradient-right
+        );
       }
     }
   }
