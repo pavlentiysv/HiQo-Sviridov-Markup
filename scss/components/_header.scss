@@ -1,5 +1,5 @@
 header {
-  background: $color-header-gray;
+  background: $color-header-bg;
   color: $color-header-text;
   font-family: "Raleway", sans-serif;
 
@@ -15,7 +15,7 @@ header {
     text-align: center;
     list-style: none;
     display: flex;
-    margin: 37px 29px;
+    margin: 36px 29px;
     padding: 0 8px 9px;
     font-size: 18px;
     position: relative;
@@ -50,7 +50,7 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 0 32px 0 38px;
+    margin: 0 34px;
     img {
       margin: 0px 24px 22px;
       width: 50px;
