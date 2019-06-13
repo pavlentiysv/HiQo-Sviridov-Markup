@@ -1,6 +1,6 @@
 .slider-content {
   position: relative;
-  font-family: "Raleway", sans-serif;
+  font-family: $font-primary;
   background: $color-slider-bg;
   color: $color-slider-text;
   display: flex;
@@ -55,7 +55,7 @@
         font-size: 16px;
         font-weight: 200;
         width: 150px;
-        height: 50px;
+        padding: 15px 0;
 
         &:hover {
           background-color: $color-slider-btn-hover;
@@ -66,9 +66,7 @@
   }
 
   .slider__dots {
-    display: flex;
-    justify-content: center;
-    margin: 8px 0 4px 0;
+    margin: 8px auto 4px;
   }
 }
 
@@ -91,13 +89,12 @@
     left: 40px;
     transform: rotate(-135deg);
   }
-  
+
   &_right {
     right: 40px;
     transform: rotate(45deg);
   }
 }
-
 
 .slider__dot {
   display: inline-block;
@@ -107,10 +104,9 @@
   border-radius: 0;
   border: 1px solid $color-header-text;
   outline: none;
-  
+
   &_active {
     background-color: $color-header-text;
     border-color: $color-dot-active;
   }
 }
-

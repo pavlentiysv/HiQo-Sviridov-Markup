@@ -1,0 +1,90 @@
+.paralax {
+  font-family: $font-primary;
+  background: $color-paralax-bg;
+  color: $color-paralax-text;
+  padding: 150px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .paralax-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1140px;
+
+    .content__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        font-size: 45px;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .content__underline {
+        width: 6rem;
+        height: 1px;
+        background-color: $color-paralax-underline;
+        margin: 22px auto 20px;
+      }
+    }
+
+    .content__quote {
+      max-width: 884px;
+      font-family: $font-qoute;
+      font-weight: 300;
+
+      p {
+        font-style: italic;
+        font-size: 30px;
+        letter-spacing: 0.3px;
+        line-height: 42px;
+        margin: 78px 0 44px;
+        position: relative;
+
+        &:before {
+          content: "‘‘";
+          font-size: 150px;
+          font-style: normal;
+          letter-spacing: -10px;
+          color: $color-paralax-qoutes;
+          font-family: $font-paralax-quotes;
+          position: absolute;
+          left: -44px;
+          top: 16px;
+        }
+      }
+
+      cite {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    width: 49%;
+    height: 30px;
+    background-color: $color-paralax-bg;
+    position: absolute;
+    left: 0;
+    top: -30px;
+  }
+
+  &:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-bottom: 30px solid $color-paralax-bg;
+    border-right: 30px solid transparent;
+    position: absolute;
+    left: 49%;
+    top: -30px;
+  }
+}
