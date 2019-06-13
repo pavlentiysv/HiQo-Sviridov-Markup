@@ -86,17 +86,18 @@
     border: solid $color-slider-arrow;
     border-width: 2px 2px 0 0;
   }
+
+  &_left {
+    left: 40px;
+    transform: rotate(-135deg);
+  }
+  
+  &_right {
+    right: 40px;
+    transform: rotate(45deg);
+  }
 }
 
-.slider__arrow_left {
-  left: 40px;
-  transform: rotate(-135deg);
-}
-
-.slider__arrow_right {
-  right: 40px;
-  transform: rotate(45deg);
-}
 
 .slider__dot {
   display: inline-block;
@@ -106,9 +107,10 @@
   border-radius: 0;
   border: 1px solid $color-header-text;
   outline: none;
+  
+  &_active {
+    background-color: $color-header-text;
+    border-color: $color-dot-active;
+  }
 }
 
-.slider__dot_active {
-  background-color: $color-header-text;
-  border-color: $color-dot-active;
-}
