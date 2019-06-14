@@ -8,7 +8,7 @@
   padding: 60px 0;
 
   .slider__slides {
-    max-width: 1140px;
+    max-width: $width-content-common;
     display: flex;
     flex-direction: column;
     margin: 100px 106px 70px 106px;
