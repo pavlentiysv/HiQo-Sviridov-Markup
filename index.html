@@ -5,7 +5,7 @@
     <title>Expire</title>
 
     
-  <link rel="stylesheet" href="/assets/style.css" /></head>
+  </head>
   <body>
     <header>
       <div class="header-container">
@@ -78,43 +78,50 @@
     </section>
 
     <section class="statistics">
-      <div class="content">
+      <div class="statistics-content">
         <ul>
-          <li>
-            <p>1000+</p>
-            <p>Happy users</p>
+          <li class="statistics-list__element">
+            <i class="icon icon-user"></i>
+            <p class="stats-number">1000+</p>
+            <p class="stats-caption">Happy users</p>
           </li>
-          <li>
-            <p>200</p>
-            <p>Sold products</p>
+          <li class="statistics-list__element">
+            <i class="icon icon-product"></i>
+            <p class="stats-number">200</p>
+            <p class="stats-caption">Sold products</p>
           </li>
-          <li>
-            <p>5632</p>
-            <p>Comments</p>
+          <li class="statistics-list__element">
+            <i class="icon icon-comment"></i>
+            <p class="stats-number">5632</p>
+            <p class="stats-caption">Comments</p>
           </li>
-          <li>
-            <p>25000+</p>
-            <p>Lines of code</p>
+          <li class="statistics-list__element">
+            <i class="icon icon-code"></i>
+            <p class="stats-number">25000+</p>
+            <p class="stats-caption">Lines of code</p>
           </li>
         </ul>
       </div>
     </section>
 
     <section class="latest-blog-post" id="blog">
-      <div class="content">
+      <div class="blog-content">
         <div class="content__header">
-          <h2>Latest blog post</h2>
+          <h2 class="title">Latest blog posts</h2>
           <div class="content__underline"></div>
-          <p>
+          <p class="quote">
             Information is a source of learning. But unless it is organized,
-            processed, and available to the right people in a format for
-            decision making, it is a burden, not a benefit.
+            processed,<br />
+            and available to the right people in a format for decision making,
+            it is a burden, not a benefit.
           </p>
         </div>
-        <div class="slider">
-          <div class="slide">
+        <div class="blog-slider">
+          <a href="#" class="slider__arrow slider__arrow_left"></a>
+          <div class="slider__slides">
             <div class="posts">
               <div class="posts__item">
+                <div class="folder"></div>
                 <h3><a href="">Just another blog post</a></h3>
                 <div class="posts__info">
                   <ul>
@@ -133,6 +140,7 @@
                 <button class="btn">Read more</button>
               </div>
               <div class="posts__item">
+                <div class="folder"></div>
                 <h3><a href="">Blog Post With Youtube video</a></h3>
                 <div class="posts__info">
                   <ul>
@@ -152,6 +160,7 @@
                 <button class="btn">Read more</button>
               </div>
               <div class="posts__item">
+                <div class="folder"></div>
                 <h3><a href="">This Could be Great</a></h3>
                 <div class="posts__info">
                   <ul>
@@ -171,6 +180,7 @@
               </div>
             </div>
           </div>
+          <a href="#" class="slider__arrow slider__arrow_right"></a>
         </div>
       </div>
     </section>
