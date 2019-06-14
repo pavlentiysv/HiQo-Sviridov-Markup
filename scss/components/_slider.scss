@@ -38,10 +38,11 @@
       font-weight: 100;
       max-width: 910px;
       line-height: 62px;
+      letter-spacing: 0.3px;
     }
 
     .slides__buttons {
-      margin: 61px 0;
+      margin: 62px 0;
 
       .btn {
         margin-right: 14px;
@@ -66,7 +67,7 @@
   }
 
   .slider__dots {
-    margin: 8px auto 4px;
+    margin: 6px auto 4px;
   }
 }
 
