@@ -4,5 +4,42 @@ a {
 
 .content__underline {
   width: 6rem;
-  height: 1px;  
+  height: 1px;
+}
+
+.divider {
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+
+  .left-line {
+    background: transparent;
+    border-top: 1px solid $color-divider;
+    height: 30px;
+    flex-grow: 1;
+  }
+
+  .sloping-line {
+    background: transparent;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 42.4px;
+      background-color: $color-divider;
+      transform: rotate(-45deg) translateX(14px) translateY(6px);
+    }
+  }
+
+  .right-line {
+    background: transparent;
+    border-bottom: 1px solid $color-divider;
+    height: 30px;
+    flex-grow: 1;
+  }
 }

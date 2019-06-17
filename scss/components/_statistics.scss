@@ -1,0 +1,83 @@
+.statistics {
+  font-family: $font-primary;
+  background: $color-statistics-bg;
+  color: $color-statistics-text;
+  position: relative;
+
+  .statistics-content {
+    max-width: $width-content-common;
+    margin: 0 auto;
+    padding: 60px 0 90px;
+
+    .statistics-list__element {
+      width: 25%;
+      float: left;
+      // box-sizing: border-box;
+      // padding-right: 30px;
+
+      .icon {
+        background-position: 0 0;
+        width: 45px;
+        height: 45px;
+        float: left;
+        margin: 0 30px 0 10px;
+      }
+
+      .icon-user {
+        background: url("../../img/user.png") no-repeat top left;
+      }
+
+      .icon-product {
+        background: url("../../img/product.png") no-repeat top left;
+        background-position: 0 5px;
+      }
+
+      .icon-comment {
+        background: url("../../img/comment.png") no-repeat top left;
+      }
+
+      .icon-code {
+        background: url("../../img/code.png") no-repeat top left;
+      }
+
+      .stats-number {
+        font-size: 40px;
+        font-weight: 400;
+      }
+
+      .stats-caption {
+        font-size: 25px;
+        font-weight: 300;
+        margin-top: 32px;
+        margin-left: 85px;
+      }
+    }
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  &:before {
+    content: "";
+    width: 49%;
+    height: 30px;
+    background-color: $color-statistics-bg;
+    position: absolute;
+    left: 0;
+    top: -30px;
+  }
+
+  &:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-bottom: 30px solid $color-statistics-bg;
+    border-right: 30px solid transparent;
+    position: absolute;
+    left: 49%;
+    top: -30px;
+  }
+}
