@@ -165,6 +165,11 @@
                 text-align: center;
                 text-decoration: none;
                 text-transform: uppercase;
+
+                &:hover {
+                  color: $color-blog-btn-text-hover;
+                  background-color: $color-blog-btn;
+                }
               }
             }
           }
