@@ -1,0 +1,36 @@
+.feedback {
+  font-family: $font-secondary;
+  .feedback-content {
+    max-width: $width-content-common;
+    width: 100%;
+    margin: 146px auto;
+
+    .content__header {
+      .title {
+        color: $color-feedback-text-primary;
+        font-size: 45px;
+        font-weight: 600;
+        font-family: $font-primary;
+      }
+
+      .content__underline {
+        background-image: linear-gradient(
+          to right,
+          $color-blog-btn,
+          $color-blog-bg-secondary
+        );
+        margin: 18px 0 21px;
+      }
+
+      .note {
+        font-family: $font-secondary;
+        font-size: 18px;
+        font-weight: 400;
+        color: $color-feedback-text-secondary;
+      }
+    }
+
+    .content__main {
+    }
+  }
+}
