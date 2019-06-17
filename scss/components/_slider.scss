@@ -87,6 +87,10 @@
       border-width: 2px 2px 0 0;
     }
 
+    &:hover:before {
+      border-color: $color-gradient-right;
+    }
+
     &_left {
       left: 40px;
       transform: rotate(-135deg);
@@ -109,6 +113,11 @@
   outline: none;
 
   &_active {
+    background-color: $color-header-text;
+    border-color: $color-dot-active;
+  }
+
+  &:hover {
     background-color: $color-header-text;
     border-color: $color-dot-active;
   }
