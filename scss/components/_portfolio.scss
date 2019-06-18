@@ -85,8 +85,8 @@
           box-sizing: border-box;
 
           .panel__icon {
-            width: 23px;
-            height: 22px;
+            width: 24px;
+            height: 24px;
             margin: 0 21px;
           }
 
@@ -100,10 +100,11 @@
 
           .zoom-icon {
             background: url("../../img/zoom_icon_gray.png") no-repeat center;
+            background-size: 24px;
 
             &:hover {
               background: url("../../img/zoom_icon_red.png") no-repeat center;
-              background-size: 22px;
+              background-size: 24px;
             }
           }
         }

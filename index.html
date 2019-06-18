@@ -328,34 +328,72 @@
         </div>
         <div class="content__main">
           <div class="contact">
-            <div class="contact__location">
-              <div class="contact__icon"></div>
-              <div class="contact__info"></div>
+            <div class="contact-element contact__location">
+              <i class="contact__icon location-icon"></i>
+              <div class="info-cell">
+                <a href="#" class="contact-caption"
+                  >623 Fifth Avenue, New York, NY 10022, USA</a
+                >
+              </div>
             </div>
-            <div class="contact__email">
-              <div class="contact__icon"></div>
-              <div class="contact__info"></div>
+
+            <div class="contact-element contact__email">
+              <i class="contact__icon email-icon"></i>
+              <div class="info-cell">
+                <a href="mailto: randomness@expire.com" class="contact-caption"
+                  >randomness@expire.com</a
+                >
+              </div>
             </div>
-            <div class="contact__phone">
-              <div class="contact__icon"></div>
-              <div class="contact__info"></div>
+
+            <div class="contact-element contact__phone">
+              <i class="contact__icon phone-icon"></i>
+              <div class="info-cell">
+                <a href="tel: +1234567890" class="contact-caption"
+                  >Phone: +(123) 456 7890</a
+                >
+                <a href="tel: +1234567899" class="contact-caption"
+                  >Fax: +(123) 456 7899</a
+                >
+              </div>
             </div>
           </div>
+
           <div class="feedback-form">
             <form action="">
               <div class="user-info">
                 <div class="user-info__name">
-                  <input type="text" name="name" />
+                  <input
+                    type="text"
+                    class="input-box"
+                    name="name"
+                    placeholder="Name"
+                  />
                 </div>
                 <div class="user-info__email">
-                  <input type="text" name="email" />
+                  <input
+                    type="text"
+                    class="input-box"
+                    name="email"
+                    placeholder="E-mail"
+                  />
                 </div>
               </div>
               <div class="message-subject">
-                <input type="text" name="subject" />
+                <input
+                  type="text"
+                  class="input-box"
+                  name="subject"
+                  placeholder="Subject"
+                />
               </div>
               <div class="message">
-                <textarea name="comment" id="#" cols="30" rows="10"></textarea>
+                <textarea
+                  class="input-box comment"
+                  name="comment"
+                  id="#"
+                  placeholder="Message"
+                ></textarea>
               </div>
             </form>
           </div>
@@ -364,19 +402,25 @@
     </section>
 
     <footer>
-      <div class="social">
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-      </div>
-      <div class="logo">
-        <img src="img/logo.png" alt="logo" height="50px" width="50px" />
-        <p>Expire</p>
-      </div>
-      <div class="copyright">
-        <p>&copy; Copyright 2014, design by dingo_design</p>
+      <div class="footer-content">
+        <div class="left-part">
+          <div class="social">
+            <a href="#" class="social-logo facebook-logo"></a>
+            <a href="#" class="social-logo twitter-logo"></a>
+            <a href="#" class="social-logo linkedin-logo"></a>
+            <a href="#" class="social-logo google-logo"></a>
+            <a href="#" class="social-logo instagram-logo"></a>
+          </div>
+        </div>
+        <div class="logo">
+          <img src="img/logo.png" alt="logo" height="50px" width="50px" />
+          <p>Expire</p>
+        </div>
+        <div class="right-part">
+          <div class="copyright">
+            <p>&copy; Copyright 2014, design by dingo_design</p>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
