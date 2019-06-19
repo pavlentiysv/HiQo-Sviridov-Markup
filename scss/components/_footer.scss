@@ -3,41 +3,14 @@
   color: $color-footer-text;
   padding: 22px 0;
   position: relative;
-
-  .btn-up {
-    width: 41px;
-    height: 41px;
-    background: $color-footer-btn-bg;
-    position: absolute;
-    top: -20px;
-    right: 80px;
-
-    .link-spanner {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-
-    &:before {
-      content: "";
-      display: inline-block;
-      width: 14px;
-      height: 14px;
-      border: solid $color-footer-up-arrow;
-      border-width: 2px 2px 0 0;
-      transform: rotate(-45deg);
-      position: absolute;
-      top: 16px;
-      left: 12px;
-    }
-
-    &:hover:before {
-      border-color: $color-footer-up-arrow-hover;
-    }
-  }
+  border-top: 2px solid;
+  border-image-source: linear-gradient(
+    90deg,
+    $color-footer-bg 0%,
+    $color-footer-text 50%,
+    $color-footer-bg 100%
+  );
+  border-image-slice: 1;
 
   .footer-content {
     max-width: $width-content-common;
@@ -46,6 +19,33 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: relative;
+
+    .btn-up {
+      width: 41px;
+      height: 41px;
+      background: $color-footer-btn-bg;
+      position: absolute;
+      top: -41px;
+      right: -41px;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border: solid $color-footer-up-arrow;
+        border-width: 2px 2px 0 0;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 16px;
+        left: 12px;
+      }
+
+      &:hover:before {
+        border-color: $color-footer-up-arrow-hover;
+      }
+    }
 
     .left-part {
       width: 50%;
@@ -95,6 +95,7 @@
       font-family: $font-primary;
       font-size: 32px;
       font-weight: 300;
+      position: relative;
 
       img {
         margin: 0px 24px 22px;
@@ -107,7 +108,7 @@
       width: 50%;
 
       .copyright {
-        padding-left: 178px;
+        padding-left: 172px;
         font-size: 14px;
         font-family: $font-secondary;
         font-weight: 300;
