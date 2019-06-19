@@ -7,9 +7,9 @@
     
   <link rel="stylesheet" href="/assets/style.css" /></head>
   <body>
-    <header>
+    <header id="page-top">
       <div class="header-container">
-        <nav>
+        <nav class="menu">
           <ul class="menu-left-part">
             <li><a href="#home">Home</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
@@ -22,7 +22,7 @@
             <p>Expire</p>
           </div>
         </a>
-        <nav>
+        <nav class="menu">
           <ul class="menu-right-part">
             <li><a href="#">Pages</a></li>
             <li><a href="#">About us</a></li>
@@ -331,30 +331,36 @@
             <div class="contact-element contact__location">
               <i class="contact__icon location-icon"></i>
               <div class="info-cell">
-                <a href="#" class="contact-caption"
-                  >623 Fifth Avenue, New York, NY 10022, USA</a
+                <a
+                  href="https://goo.gl/maps/94PhsTXUjC31fsjZA"
+                  class="contact-caption"
+                  target="_blank"
                 >
+                  623 Fifth Avenue, New York, NY 10022, USA
+                </a>
               </div>
             </div>
 
             <div class="contact-element contact__email">
               <i class="contact__icon email-icon"></i>
               <div class="info-cell">
-                <a href="mailto: randomness@expire.com" class="contact-caption"
-                  >randomness@expire.com</a
-                >
+                <a href="mailto: randomness@expire.com" class="contact-caption">
+                  randomness@expire.com
+                </a>
               </div>
             </div>
 
             <div class="contact-element contact__phone">
               <i class="contact__icon phone-icon"></i>
               <div class="info-cell">
-                <a href="tel: +1234567890" class="contact-caption"
-                  >Phone: +(123) 456 7890</a
-                >
-                <a href="tel: +1234567899" class="contact-caption"
-                  >Fax: +(123) 456 7899</a
-                >
+                <label class="contact-label">Phone: </label>
+                <a href="tel:+1234567890" class="contact-caption">
+                  +(123) 456 7890
+                </a>
+                <label class="contact-label">Fax: </label>
+                <a href="tel:+1234567899" class="contact-caption">
+                  +(123) 456 7899
+                </a>
               </div>
             </div>
           </div>
@@ -391,7 +397,6 @@
                 <textarea
                   class="input-box comment"
                   name="comment"
-                  id="#"
                   placeholder="Message"
                 ></textarea>
               </div>
@@ -421,6 +426,11 @@
             <p>&copy; Copyright 2014, design by dingo_design</p>
           </div>
         </div>
+      </div>
+      <div class="btn-up">
+        <a href="#page-top">
+          <span class="link-spanner"></span>
+        </a>
       </div>
     </footer>
   </body>

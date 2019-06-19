@@ -4,7 +4,8 @@
 
   .portfolio-content {
     max-width: $width-content-max;
-    margin: 50px auto 0;
+    margin: 0 auto;
+    padding-top: 50px;
 
     .content__header {
       margin: 0 auto;
@@ -48,12 +49,14 @@
             font-weight: 600;
             padding-top: 48px;
           }
+
           .item-theme {
             font-size: 15px;
             font-weight: 400;
             margin-top: 22px;
             padding-bottom: 64px;
           }
+
           &:before {
             content: "";
             position: absolute;

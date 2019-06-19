@@ -2,6 +2,42 @@ footer {
   background: $color-footer-bg;
   color: $color-footer-text;
   padding: 22px 0;
+  position: relative;
+
+  .btn-up {
+    width: 41px;
+    height: 41px;
+    background: $color-footer-btn-bg;
+    position: absolute;
+    top: -20px;
+    right: 80px;
+
+    .link-spanner {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: solid $color-footer-up-arrow;
+      border-width: 2px 2px 0 0;
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 16px;
+      left: 12px;
+    }
+
+    &:hover:before {
+      border-color: $color-footer-up-arrow-hover;
+    }
+  }
 
   .footer-content {
     max-width: $width-content-common;

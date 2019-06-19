@@ -6,7 +6,8 @@
   .blog-content {
     width: 100%;
     max-width: calc(#{$width-content-common} + (#{$padding-blog-posts} * 2));
-    margin: 100px auto;
+    margin: 0 auto;
+    padding: 100px 0;
 
     .content__header {
       margin: 0 auto;
