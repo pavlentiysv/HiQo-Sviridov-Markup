@@ -6,8 +6,9 @@
     font-family: $font-primary;
     color: $color-slider-text;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 59px 0;
     max-width: $width-content-common;
+    letter-spacing: 1px;
 
     .slider__slides {
       display: flex;
@@ -18,8 +19,8 @@
         font-size: 70px;
         font-weight: 900;
         position: relative;
-        margin-bottom: 19px;
-        padding-bottom: 40px;
+        margin-bottom: 18px;
+        padding-bottom: 39px;
 
         &:after {
           content: "";
@@ -68,8 +69,9 @@
     }
 
     .slider__dots {
-      width: 14%;
-      margin: 6px auto 4px;
+      display: flex;
+      justify-content: center;
+      padding: 8px 0 5px;
     }
   }
   .slider__arrow {
@@ -104,7 +106,6 @@
 }
 
 .slider__dot {
-  display: inline-block;
   margin: 0 9px;
   width: 20px;
   height: 20px;
