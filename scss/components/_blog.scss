@@ -99,6 +99,7 @@
 
                 a {
                   color: $color-blog-text-subprimary;
+                  transition: color 0.3s ease;
 
                   &:hover {
                     color: $color-blog-btn;
@@ -169,6 +170,7 @@
                 text-decoration: none;
                 text-transform: uppercase;
                 cursor: pointer;
+                transition: all 0.5s ease;
 
                 &:hover {
                   color: $color-blog-btn-text-hover;
@@ -194,6 +196,7 @@
         height: 20px;
         border: solid $color-slider-arrow;
         border-width: 2px 2px 0 0;
+        transition: all 0.2s ease;
       }
 
       &:hover:before {

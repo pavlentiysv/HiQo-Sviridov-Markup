@@ -40,6 +40,7 @@
         position: absolute;
         top: 16px;
         left: 12px;
+        transition: all 0.2s ease;
       }
 
       &:hover:before {
@@ -59,6 +60,7 @@
         .social-logo {
           width: 28px;
           height: 21px;
+          transition: opacity 0.2s ease;
 
           &.facebook-logo {
             background: url(../../img/facebook.png) no-repeat center;
@@ -84,6 +86,10 @@
             background: url(../../img/instagram.png) no-repeat center;
             background-size: 21px;
           }
+
+          &:hover {
+            opacity: 0.6;
+          }
         }
       }
     }
@@ -97,7 +103,7 @@
       font-weight: 300;
       position: relative;
 
-      img {
+      .logo-image {
         margin: 0px 24px 22px;
         width: 50px;
         height: 50px;

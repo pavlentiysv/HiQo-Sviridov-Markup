@@ -61,6 +61,7 @@
           width: 150px;
           padding: 15px 0;
           cursor: pointer;
+          transition: all 0.5s ease;
 
           &:hover {
             background-color: $color-slider-btn-hover;
@@ -83,6 +84,7 @@
         height: 20px;
         border: solid $color-slider-arrow;
         border-width: 2px 2px 0 0;
+        transition: all 0.2s ease;
       }
 
       &:hover:before {
@@ -115,6 +117,7 @@
   border-radius: 0;
   border: 1px solid $color-header-text;
   outline: none;
+  transition: all 0.2s;
 
   &_active {
     background-color: $color-header-text;
