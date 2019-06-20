@@ -8,22 +8,11 @@
     max-width: $width-content-common;
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
 
     .menu {
-      width: 50%;
-      position: relative;
-
-      .menu-left-part {
-        display: flex;
-        justify-content: flex-end;
-      }
-
-      .menu-right-part {
-        display: flex;
-        justify-content: flex-start;
-      }
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
     }
 
     .logo {
@@ -35,6 +24,13 @@
       font-weight: 300;
       margin: 0 38px;
       position: relative;
+      text-transform: capitalize;
+      padding-left: 30px;
+
+      &-item {
+        margin: 0;
+        padding: 0;
+      }
 
       .logo-image {
         margin: 0px 24px 21px;
@@ -51,33 +47,35 @@
   .menu-item {
     text-align: center;
     list-style: none;
-    margin: 35px 29px;
-    padding: 0 8px 9px;
+    margin: 35px 16px;
+    padding: 0 15px;
     font-size: 18px;
     position: relative;
     text-transform: uppercase;
     transition: all 0.2s ease;
 
-    &:before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      border-bottom: 2px solid;
-      border-image-source: linear-gradient(
-        to right,
-        $color-gradient-left,
-        $color-gradient-right
-      );
-      border-image-slice: 1;
-      transition: 0.3s;
-      transform: scaleX(0);
-    }
+    &__link {
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 2px solid;
+        border-image-source: linear-gradient(
+          to right,
+          $color-gradient-left,
+          $color-gradient-right
+        );
+        border-image-slice: 1;
+        transition: 0.3s;
+        transform: scaleX(0);
+      }
 
-    &:hover:before {
-      transform: scale(1);
+      &:hover:before {
+        transform: scale(1);
+      }
     }
   }
 }

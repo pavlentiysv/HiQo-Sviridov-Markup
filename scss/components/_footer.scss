@@ -48,47 +48,50 @@
       }
     }
 
-    .left-part {
+    .social-container {
       width: 50%;
 
       .social {
         display: flex;
-        justify-content: space-between;
-        max-width: 278px;
-        width: 72%;
+        flex-direction: row;
 
-        .social-logo {
-          width: 28px;
-          height: 21px;
-          transition: opacity 0.2s ease;
+        .social-item {
+          margin-right: 34px;
 
-          &.facebook-logo {
-            background: url(../../img/facebook.png) no-repeat center;
-            background-size: 10px 21px;
-          }
+          .social-logo {
+            width: 28px;
+            height: 21px;
+            transition: opacity 0.2s ease;
+            display: block;
 
-          &.twitter-logo {
-            background: url(../../img/twitter.png) no-repeat center;
-            background-size: 28px 21px;
-          }
+            &.facebook-logo {
+              background: url(../../img/facebook.png) no-repeat center;
+              background-size: 10px 21px;
+            }
 
-          &.linkedin-logo {
-            background: url(../../img/linkedin.png) no-repeat center;
-            background-size: 22px 21px;
-          }
+            &.twitter-logo {
+              background: url(../../img/twitter.png) no-repeat center;
+              background-size: 28px 21px;
+            }
 
-          &.google-logo {
-            background: url(../../img/google.png) no-repeat center;
-            background-size: 21px;
-          }
+            &.linkedin-logo {
+              background: url(../../img/linkedin.png) no-repeat center;
+              background-size: 22px 21px;
+            }
 
-          &.instagram-logo {
-            background: url(../../img/instagram.png) no-repeat center;
-            background-size: 21px;
-          }
+            &.google-logo {
+              background: url(../../img/google.png) no-repeat center;
+              background-size: 21px;
+            }
 
-          &:hover {
-            opacity: 0.6;
+            &.instagram-logo {
+              background: url(../../img/instagram.png) no-repeat center;
+              background-size: 21px;
+            }
+
+            &:hover {
+              opacity: 0.6;
+            }
           }
         }
       }
@@ -110,7 +113,7 @@
       }
     }
 
-    .right-part {
+    .copyright-container {
       width: 50%;
 
       .copyright {
