@@ -1,0 +1,127 @@
+.footer {
+  background: $color-footer-bg;
+  color: $color-footer-text;
+  padding: 22px 0;
+  position: relative;
+  border-top: 2px solid;
+  border-image-source: linear-gradient(
+    90deg,
+    $color-footer-bg 0%,
+    $color-footer-text 50%,
+    $color-footer-bg 100%
+  );
+  border-image-slice: 1;
+
+  .footer-content {
+    max-width: $width-content-common;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+
+    .btn-up {
+      width: 41px;
+      height: 41px;
+      background: $color-footer-btn-bg;
+      position: absolute;
+      top: -41px;
+      right: -41px;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border: solid $color-footer-up-arrow;
+        border-width: 2px 2px 0 0;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 16px;
+        left: 12px;
+        transition: all 0.2s ease;
+      }
+
+      &:hover:before {
+        border-color: $color-footer-up-arrow-hover;
+      }
+    }
+
+    .social-container {
+      width: 50%;
+
+      .social {
+        display: flex;
+        flex-direction: row;
+
+        .social-item {
+          margin-right: 34px;
+
+          .social-logo {
+            width: 28px;
+            height: 21px;
+            transition: opacity 0.2s ease;
+            display: block;
+
+            &.facebook-logo {
+              background: url(../../img/facebook.png) no-repeat center;
+              background-size: 10px 21px;
+            }
+
+            &.twitter-logo {
+              background: url(../../img/twitter.png) no-repeat center;
+              background-size: 28px 21px;
+            }
+
+            &.linkedin-logo {
+              background: url(../../img/linkedin.png) no-repeat center;
+              background-size: 22px 21px;
+            }
+
+            &.google-logo {
+              background: url(../../img/google.png) no-repeat center;
+              background-size: 21px;
+            }
+
+            &.instagram-logo {
+              background: url(../../img/instagram.png) no-repeat center;
+              background-size: 21px;
+            }
+
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: $font-primary;
+      font-size: 32px;
+      font-weight: 300;
+      position: relative;
+
+      .logo-image {
+        margin: 0px 24px 22px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .copyright-container {
+      width: 50%;
+
+      .copyright {
+        padding-left: 172px;
+        font-size: 14px;
+        font-family: $font-secondary;
+        font-weight: 300;
+      }
+    }
+  }
+}

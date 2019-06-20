@@ -3,7 +3,7 @@
   background: $color-paralax-bg;
   color: $color-paralax-text;
   position: relative;
-  padding: 150px 0;
+  padding: 144px 0 186px;
   display: flex;
   justify-content: center;
 
@@ -17,7 +17,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      
 
       h2 {
         font-size: 45px;
@@ -30,7 +29,7 @@
 
       .content__underline {
         background-color: $color-paralax-underline;
-        margin: 22px auto 20px;
+        margin: 20px auto 19px;
       }
     }
 
@@ -38,13 +37,14 @@
       max-width: 884px;
       font-family: $font-quote;
       font-weight: 300;
+      padding-left: 25px;
 
       p {
         font-style: italic;
         font-size: 30px;
         letter-spacing: 0.3px;
         line-height: 42px;
-        margin: 78px 0 44px;
+        margin: 80px 0 44px;
         position: relative;
 
         &:before {

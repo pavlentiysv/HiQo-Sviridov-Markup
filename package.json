@@ -13,6 +13,8 @@
     "gulp": "3.9.1",
     "gulp-autoprefixer": "6.1.0",
     "gulp-change": "1.0.2",
+    "gulp-html": "^0.7.0",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-sass": "3.2.1"
   }
 }

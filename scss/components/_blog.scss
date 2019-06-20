@@ -6,7 +6,9 @@
   .blog-content {
     width: 100%;
     max-width: calc(#{$width-content-common} + (#{$padding-blog-posts} * 2));
-    margin: 100px auto;
+    margin: 0 auto;
+    padding-top: 96px;
+    position: relative;
 
     .content__header {
       margin: 0 auto;
@@ -36,12 +38,12 @@
           $color-blog-btn,
           $color-blog-bg-secondary
         );
-        margin: 28px auto 16px;
+        margin: 29px auto 16px;
       }
     }
 
     .blog-slider {
-      margin: 130px 0;
+      margin: 130px 0 97px;
 
       .slider__slides {
         .posts {
@@ -85,6 +87,7 @@
               padding: 22px 25px 26px;
               border: 1px solid $color-blog-border;
               border-top: none;
+              min-height: 317px;
 
               .posts__title {
                 font-size: 25px;
@@ -96,6 +99,7 @@
 
                 a {
                   color: $color-blog-text-subprimary;
+                  transition: color 0.3s ease;
 
                   &:hover {
                     color: $color-blog-btn;
@@ -165,6 +169,8 @@
                 text-align: center;
                 text-decoration: none;
                 text-transform: uppercase;
+                cursor: pointer;
+                transition: all 0.5s ease;
 
                 &:hover {
                   color: $color-blog-btn-text-hover;
@@ -176,35 +182,36 @@
         }
       }
     }
-  }
 
-  .slider__arrow {
-    position: absolute;
-    top: 60%;
-    z-index: 1;
-    outline: none;
+    .slider__arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      outline: none;
 
-    &:before {
-      content: "";
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: solid $color-slider-arrow;
-      border-width: 2px 2px 0 0;
-    }
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: solid $color-slider-arrow;
+        border-width: 2px 2px 0 0;
+        transition: all 0.2s ease;
+      }
 
-    &:hover:before {
-      border-color: $color-blog-btn;
-    }
+      &:hover:before {
+        border-color: $color-blog-btn;
+      }
 
-    &_left {
-      left: 40px;
-      transform: rotate(-135deg);
-    }
+      &_left {
+        left: -65px;
+        transform: rotate(-135deg);
+      }
 
-    &_right {
-      right: 40px;
-      transform: rotate(45deg);
+      &_right {
+        right: -65px;
+        transform: rotate(45deg);
+      }
     }
   }
 }

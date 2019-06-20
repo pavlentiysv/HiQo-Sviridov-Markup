@@ -1,65 +1,81 @@
-header {
+.header {
   background: $color-header-bg;
   color: $color-header-text;
   font-family: $font-primary;
+  padding: 22px 0;
+
+  .header-container {
+    max-width: $width-content-common;
+    width: 100%;
+    margin: 0 auto;
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: $font-primary;
+      font-size: 32px;
+      font-weight: 300;
+      margin: 0 38px;
+      position: relative;
+      text-transform: capitalize;
+      padding-left: 30px;
+
+      &-item {
+        margin: 0;
+        padding: 0;
+      }
+
+      .logo-image {
+        margin: 0px 24px 21px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
 
   a {
     color: $color-header-text;
   }
 
-  ul {
-    display: flex;
-  }
-
-  li {
+  .menu-item {
     text-align: center;
     list-style: none;
-    display: flex;
-    margin: 36px 29px;
-    padding: 0 8px 9px;
+    margin: 35px 16px;
+    padding: 0 15px;
     font-size: 18px;
     position: relative;
     text-transform: uppercase;
+    transition: all 0.2s ease;
 
-    &:hover {
-      &:after {
+    &__link {
+      &:before {
         content: "";
-        width: 100%;
-        height: 1px;
         position: absolute;
-        bottom: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
         left: 0;
-        background: linear-gradient(
+        border-bottom: 2px solid;
+        border-image-source: linear-gradient(
           to right,
           $color-gradient-left,
           $color-gradient-right
         );
+        border-image-slice: 1;
+        transition: 0.3s;
+        transform: scaleX(0);
       }
-    }
-  }
 
-  .header-container {
-    margin: 0 auto;
-    padding: 22px 0;
-    display: flex;
-    justify-content: center;
-  }
-
-  .logo {
-    font-size: 32px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 34px;
-
-    img {
-      margin: 0px 24px 22px;
-      width: 50px;
-      height: 50px;
-    }
-    
-    p {
-      margin: 0;
+      &:hover:before {
+        transform: scale(1);
+      }
     }
   }
 }

@@ -3,7 +3,7 @@ a {
 }
 
 .content__underline {
-  width: 6rem;
+  width: 100px; //6rem
   height: 1px;
 }
 
@@ -42,4 +42,13 @@ a {
     height: 30px;
     flex-grow: 1;
   }
+}
+
+.link-spanner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
