@@ -50,5 +50,35 @@ a {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 1;  
 }
+
+.hidden {
+  display: none;
+
+  @each $breakpnt, $size in $breakpoints {
+    @media screen and (max-width: $size) {
+      &-#{$breakpnt} {
+        display: none;
+      }
+    }
+  }
+}
+
+.visible {
+  @each $breakpnt, $size in $breakpoints {
+    &-#{$breakpnt} {
+      display: none;
+    }
+  }
+
+  @each $breakpnt, $size in $breakpoints {
+    @media screen and (max-width: $size) {
+      &-#{$breakpnt} {
+        display: block;
+      }
+    }
+  }
+}
+
+

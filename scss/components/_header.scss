@@ -4,15 +4,65 @@
   font-family: $font-primary;
   padding: 22px 0;
 
+  @include screen-large {
+    padding: 0;
+  }
+
   .header-container {
     max-width: $width-content-common;
     width: 100%;
     margin: 0 auto;
+    position: relative;
+
+    @include screen-medium {
+      padding-top: 30px;
+    }
+
+    @include screen-x-large {
+      max-width: $responsive-content-max;
+    }
+
+    @include screen-medium {
+      .burger-checkbox:checked + .navigation .menu {
+        display: flex;
+        flex-direction: column;
+        background: $color-statistics-bg;
+        height: auto;
+      }
+    }
+
+    .burger-label {
+      width: 40px;
+      height: 30px;
+      cursor: pointer;
+
+      .burger-line {
+        display: block;
+        height: 2px;
+        background-color: $color-header-text;
+        margin: 6px 0;
+      }
+    }
 
     .menu {
       display: flex;
       flex-direction: row;
       justify-content: center;
+
+      @include screen-medium {
+        height: 0;
+        transition: 0.5s ease;
+      }
+
+      .mobile-title {
+        padding-top: 32px;
+        font-size: 40px;
+
+        &__text {
+          border-bottom: 1px solid $color-header-text;
+          padding-bottom: 6px;
+        }
+      }
     }
 
     .logo {
@@ -27,6 +77,16 @@
       text-transform: capitalize;
       padding-left: 30px;
 
+      @include screen-xx-large {
+        margin: 0 18px;
+        padding: 0;
+      }
+
+      @include screen-x-large {
+        margin: 0;
+        padding: 0;
+      }
+
       &-item {
         margin: 0;
         padding: 0;
@@ -36,6 +96,12 @@
         margin: 0px 24px 21px;
         width: 50px;
         height: 50px;
+
+        @include screen-large {
+          margin: 21px 24px;
+          width: 40px;
+          height: 40px;
+        }
       }
     }
   }
@@ -54,6 +120,26 @@
     text-transform: uppercase;
     transition: all 0.2s ease;
 
+    &.logo-item {
+      @include screen-medium {
+        display: none;
+      }
+    }
+
+    @include screen-xx-large {
+      margin: 35px 5px;
+    }
+
+    @include screen-large {
+      font-size: 16px;
+      padding: 0 8px 8px;
+    }
+
+    @include screen-medium {
+      margin: 10px;
+      font-size: 14px;
+    }
+
     &__link {
       &:before {
         content: "";
@@ -71,6 +157,10 @@
         border-image-slice: 1;
         transition: 0.3s;
         transform: scaleX(0);
+
+        @include screen-large {
+          border-width: 1px;
+        }
       }
 
       &:hover:before {

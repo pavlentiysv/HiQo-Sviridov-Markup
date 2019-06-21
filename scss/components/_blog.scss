@@ -189,6 +189,10 @@
       z-index: 1;
       outline: none;
 
+      @include screen-xx-large {
+        display: none;
+      }
+
       &:before {
         content: "";
         display: inline-block;

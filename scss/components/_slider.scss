@@ -11,6 +11,10 @@
     letter-spacing: 1px;
     position: relative;
 
+    @include screen-x-large {
+      max-width: $responsive-content-max;
+    }
+
     .slider__slides {
       display: flex;
       flex-direction: column;
@@ -76,6 +80,10 @@
       top: 50%;
       z-index: 1;
       outline: none;
+
+      @include screen-xx-large {
+        display: none;
+      }
 
       &:before {
         content: "";

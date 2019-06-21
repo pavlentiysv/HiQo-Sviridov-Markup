@@ -121,6 +121,10 @@
         font-size: 14px;
         font-family: $font-secondary;
         font-weight: 300;
+
+        @include screen-medium {
+          padding: 0;
+        }
       }
     }
   }

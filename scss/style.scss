@@ -1,8 +1,10 @@
 @import "fonts";
 @import "variables";
+@import "breakpoints";
 @import "vendor/reset";
 @import "typography";
 @import "common";
+@import "mixins/responsive";
 // import components here
 @import "components/header";
 @import "components/slider";
@@ -12,3 +14,7 @@
 @import "components/portfolio";
 @import "components/feedback";
 @import "components/footer";
+
+div {
+  display: block;
+}
