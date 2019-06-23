@@ -14,8 +14,14 @@
     margin: 0 auto;
     position: relative;
 
+    .mini-logo {
+      position: absolute;
+      right: 0px;
+      top: 12px;
+    }
+
     @include screen-medium {
-      padding-top: 30px;
+      padding: 25px 0 15px;
     }
 
     @include screen-x-large {
@@ -23,11 +29,35 @@
     }
 
     @include screen-medium {
-      .burger-checkbox:checked + .navigation .menu {
+      .burger-checkbox:checked ~ .navigation .menu {
         display: flex;
         flex-direction: column;
         background: $color-statistics-bg;
-        height: auto;
+        position: fixed;
+        z-index: 4;
+        width: 84%;
+      }
+
+      .burger-checkbox:checked + .burger-label .burger-line:nth-child(1) {
+        position: absolute;
+        margin: 0;
+        width: 28px;
+        transform: rotate(-45deg);
+        top: 10px;
+        left: -4px;
+      }
+
+      .burger-checkbox:checked + .burger-label .burger-line:nth-child(2) {
+        display: none;
+      }
+
+      .burger-checkbox:checked + .burger-label .burger-line:nth-child(3) {
+        position: absolute;
+        margin: 0;
+        width: 28px;
+        transform: rotate(45deg);
+        top: 10px;
+        left: 15px;
       }
     }
 
@@ -35,12 +65,14 @@
       width: 40px;
       height: 30px;
       cursor: pointer;
+      position: relative;
 
       .burger-line {
         display: block;
         height: 2px;
         background-color: $color-header-text;
         margin: 6px 0;
+        transition: 0.5s ease;
       }
     }
 
@@ -50,8 +82,11 @@
       justify-content: center;
 
       @include screen-medium {
-        height: 0;
+        display: none;
         transition: 0.5s ease;
+        border: 2px solid $color-divider;
+        border-top: none;
+        margin-top: 15px;
       }
 
       .mobile-title {
@@ -137,7 +172,7 @@
 
     @include screen-medium {
       margin: 10px;
-      font-size: 14px;
+      font-size: 18px;
     }
 
     &__link {
@@ -161,11 +196,23 @@
         @include screen-large {
           border-width: 1px;
         }
+
+        @include screen-medium {
+          width: 100px;
+          left: calc(50% - 50px);
+        }
       }
 
       &:hover:before {
         transform: scale(1);
       }
     }
+  }
+
+  @include screen-medium {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 76px;
   }
 }
