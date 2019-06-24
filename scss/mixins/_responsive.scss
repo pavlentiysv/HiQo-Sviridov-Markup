@@ -10,6 +10,12 @@
   }
 }
 
+@mixin screen-semi-large {
+  @media screen and (max-width: $screen-semi-large) {
+    @content;
+  }
+}
+
 @mixin screen-large {
   @media screen and (max-width: $screen-large) {
     @content;
@@ -22,8 +28,20 @@
   }
 }
 
+@mixin screen-semi-small {
+  @media screen and (max-width: $screen-semi-small) {
+    @content;
+  }
+}
+
 @mixin screen-small {
   @media screen and (max-width: $screen-small) {
+    @content;
+  }
+}
+
+@mixin screen-x-small {
+  @media screen and (max-width: $screen-x-small) {
     @content;
   }
 }

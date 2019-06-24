@@ -134,6 +134,7 @@
               border: 1px solid $color-blog-border;
               border-top: none;
               min-height: 317px;
+              text-align: start;
 
               .posts__title {
                 font-size: 25px;
@@ -264,6 +265,20 @@
       }
 
       @include screen-xx-large {
+        top: 30%;
+
+        &_left {
+          left: 20px;
+        }
+
+        &_right {
+          right: 20px;
+        }
+      }
+
+      @include screen-x-large {
+        top: 50%;
+
         &_left {
           left: -15px;
         }
