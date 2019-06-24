@@ -7,12 +7,20 @@
     margin: 0 auto;
     padding: 46px 0 36px;
 
+    @include screen-x-large {
+      max-width: $responsive-content-max;
+    }
+
     .content__header {
       .title {
         color: $color-feedback-text-primary;
         font-size: 45px;
         font-weight: 600;
         font-family: $font-primary;
+
+        @include screen-medium {
+          font-size: 36px;
+        }
       }
 
       .content__underline {
@@ -22,6 +30,10 @@
           $color-blog-bg-secondary
         );
         margin: 18px 0 21px;
+
+        @include screen-medium {
+          margin: 12px 0 16px;
+        }
       }
 
       .note {
@@ -29,6 +41,10 @@
         font-size: 18px;
         font-weight: 400;
         color: $color-feedback-text-secondary;
+
+        @include screen-medium {
+          font-size: 14px;
+        }
       }
     }
 
@@ -36,6 +52,11 @@
       display: flex;
       flex-direction: row;
       margin-top: 56px;
+      flex-wrap: wrap;
+
+      @include screen-medium {
+        margin-top: 28px;
+      }
 
       .contact {
         display: flex;
@@ -43,11 +64,24 @@
         flex-basis: 372px;
         padding-left: 28px;
 
+        @include screen-large {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          flex-basis: auto;
+          padding-left: 0;
+          margin: 0 auto;
+        }
+
         .contact-element {
           display: flex;
           flex-direction: row;
           align-items: center;
           margin-bottom: 66px;
+
+          @include screen-large {
+            margin-bottom: 30px;
+          }
 
           .contact__icon {
             height: 36px;
@@ -90,6 +124,10 @@
         .info-cell {
           padding-left: 64px;
           max-width: 170px;
+
+          @include screen-large {
+            padding: 0 32px 0 32px;
+          }
 
           .contact-caption,
           .contact-label {
@@ -142,6 +180,10 @@
           display: flex;
           flex-direction: row;
 
+          @include screen-small {
+            flex-direction: column;
+          }
+
           &__name {
             box-sizing: border-box;
             width: 50%;
@@ -153,6 +195,21 @@
             box-sizing: border-box;
             width: 50%;
             padding-left: 15px;
+          }
+
+          @include screen-small {
+            &__name {
+              width: 100%;
+              padding: 0;
+              box-sizing: content-box;
+              margin-bottom: 28px;
+            }
+
+            &__email {
+              width: 100%;
+              padding: 0;
+              box-sizing: content-box;
+            }
           }
         }
       }

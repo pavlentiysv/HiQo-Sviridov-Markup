@@ -40,6 +40,10 @@
         font-size: 45px;
         font-weight: 600;
         text-align: center;
+
+        @include screen-medium {
+          font-size: 36px;
+        }
       }
 
       .content__underline {
