@@ -11,6 +11,14 @@
     letter-spacing: 1px;
     position: relative;
 
+    @include screen-large {
+      padding: 30px 0 40px;
+    }
+
+    @include screen-medium {
+      padding: 80px 0 40px;
+    }
+
     @include screen-x-large {
       max-width: $responsive-content-max;
     }
@@ -20,12 +28,22 @@
       flex-direction: column;
       margin: 100px 0 70px;
 
+      @include screen-large {
+        margin: 0;
+      }
+
       h1 {
         font-size: 70px;
         font-weight: 900;
         position: relative;
         margin-bottom: 18px;
         padding-bottom: 39px;
+
+        @include screen-large {
+          font-size: 50px;
+          margin-bottom: 12px;
+          padding-bottom: 28px;
+        }
 
         &:after {
           content: "";
@@ -36,6 +54,12 @@
           width: 200px;
           margin-left: 4px;
           background-image: url(../../img/line.png);
+
+          @include screen-large {
+            background-size: 100%;
+            height: 5px;
+            width: 150px;
+          }
         }
       }
 
@@ -46,10 +70,19 @@
         max-width: 910px;
         line-height: 62px;
         letter-spacing: 0.3px;
+
+        @include screen-large {
+          font-size: 36px;
+          line-height: 36px;
+        }
       }
 
       .slides__buttons {
         margin: 62px 0;
+
+        @include screen-large {
+          margin: 40px 0 26px;
+        }
 
         .btn {
           margin-right: 14px;
@@ -67,6 +100,11 @@
           cursor: pointer;
           transition: all 0.5s ease;
 
+          @include screen-large {
+            margin-top: 5px;
+            margin-bottom: 5px;
+          }
+
           &:hover {
             background-color: $color-slider-btn-hover;
             border: 1px solid $color-slider-btn-hover;
@@ -80,10 +118,6 @@
       top: 50%;
       z-index: 1;
       outline: none;
-
-      @include screen-xx-large {
-        display: none;
-      }
 
       &:before {
         content: "";
@@ -107,6 +141,18 @@
       &_right {
         right: -80px;
         transform: rotate(45deg);
+      }
+
+      @include screen-xx-large {
+        top: 84%;
+
+        &_left {
+          left: 0;
+        }
+
+        &_right {
+          right: 0;
+        }
       }
     }
 
