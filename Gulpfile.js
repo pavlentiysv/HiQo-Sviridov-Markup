@@ -22,6 +22,7 @@ var autoprefixerOptions = {
 
 gulp.task("serve", ["validate-html", "add css"], function() {
   browserSync.init({
+    open: false,
     server: {
       baseDir: "./",
       index: "assets/index.html"

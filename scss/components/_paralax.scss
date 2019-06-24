@@ -7,11 +7,19 @@
   display: flex;
   justify-content: center;
 
+  @include screen-large {
+    padding: 48px 0 56px;
+  }
+
   .paralax-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: $width-content-common;
+
+    @include screen-x-large {
+      max-width: $responsive-content-max;
+    }
 
     .content__header {
       display: flex;
@@ -25,6 +33,7 @@
 
       p {
         font-size: 18px;
+        text-align: center;
       }
 
       .content__underline {
@@ -46,6 +55,11 @@
         line-height: 42px;
         margin: 80px 0 44px;
         position: relative;
+
+        @include screen-medium {
+          margin: 40px 0 30px;
+          line-height: 36px;
+        }
 
         &:before {
           content: "‘‘";

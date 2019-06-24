@@ -29,6 +29,10 @@
       top: -41px;
       right: -41px;
 
+      @include screen-xx-large {
+        right: 5px;
+      }
+
       &:before {
         content: "";
         display: inline-block;
