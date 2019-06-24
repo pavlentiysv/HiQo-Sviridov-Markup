@@ -148,6 +148,27 @@
         flex-direction: column;
         flex-grow: 1;
 
+        .btn-submit {
+          font-size: 16px;
+          background: transparent;
+          color: $color-blog-btn;
+          font-family: $font-primary;
+          font-weight: 600;
+          padding: 15px 28px;
+          border: 1px solid $color-blog-btn;
+          text-align: center;
+          text-decoration: none;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: all 0.5s ease;
+          margin: 0 auto;
+
+          &:hover {
+            color: $color-blog-btn-text-hover;
+            background-color: $color-blog-btn;
+          }
+        }
+
         .input-box {
           box-sizing: border-box;
           width: 100%;
