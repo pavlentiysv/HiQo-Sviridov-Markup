@@ -9,11 +9,30 @@
     margin: 0 auto;
     padding: 60px 0 96px;
 
+    @include screen-x-large {
+      max-width: $responsive-content-max;
+      padding: 50px 0 60px;
+    }
+
     .statistics-list__element {
       width: 25%;
       float: left;
       padding-left: 17px;
       box-sizing: border-box;
+
+      @include screen-x-large {
+        width: 50%;
+        padding: 20px 0 10px 56px;
+      }
+
+      @include screen-medium {
+        padding: 16px 0;
+      }
+
+      @include screen-small {
+        width: 100%;
+        padding: 16px 0 16px 15%;
+      }
 
       .icon {
         background-position: 0 0;
@@ -43,6 +62,10 @@
       .stats-number {
         font-size: 40px;
         font-weight: 400;
+
+        @include screen-medium {
+          font-size: 28px;
+        }
       }
 
       .stats-caption {
@@ -50,6 +73,11 @@
         font-weight: 300;
         margin-top: 32px;
         margin-left: 85px;
+
+        @include screen-medium {
+          margin-top: 16px;
+          font-size: 18px;
+        }
       }
     }
 

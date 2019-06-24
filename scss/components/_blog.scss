@@ -10,6 +10,14 @@
     padding-top: 96px;
     position: relative;
 
+    @include screen-x-large {
+      max-width: $responsive-content-max;
+    }
+
+    @include screen-large {
+      padding-top: 36px;
+    }
+
     .content__header {
       margin: 0 auto;
 
@@ -19,6 +27,10 @@
         font-weight: 600;
         text-align: center;
         text-transform: capitalize;
+
+        @include screen-medium {
+          font-size: 36px;
+        }
       }
 
       .quote {
@@ -30,6 +42,14 @@
         margin: 0 auto;
         letter-spacing: -0.1px;
         line-height: 25px;
+
+        @include screen-medium {
+          font-size: 14px;
+        }
+
+        @include screen-x-large {
+          width: 100%;
+        }
       }
 
       .content__underline {
@@ -39,15 +59,24 @@
           $color-blog-bg-secondary
         );
         margin: 29px auto 16px;
+
+        @include screen-large {
+          margin: 18px auto 10px;
+        }
       }
     }
 
     .blog-slider {
       margin: 130px 0 97px;
 
+      @include screen-large {
+        margin: 75px 0 34px;
+      }
+
       .slider__slides {
         .posts {
           font-size: 0;
+          text-align: center;
 
           .posts__item {
             display: inline-block;
@@ -55,6 +84,23 @@
             vertical-align: top;
             width: 33.3%;
             padding: 0 $padding-blog-posts;
+            max-width: 400px;
+
+            @include screen-x-large {
+              width: 50%;
+
+              &:nth-child(n + 3) {
+                display: none;
+              }
+            }
+
+            @include screen-large {
+              width: 100%;
+
+              &:nth-child(n + 2) {
+                display: none;
+              }
+            }
 
             .folder {
               background-color: $color-blog-bg-secondary;
@@ -119,6 +165,10 @@
 
                   &:not(:last-child) {
                     margin-right: 16px;
+                  }
+
+                  @include screen-small {
+                    margin: 5px 16px 0 0;
                   }
                 }
 
@@ -189,10 +239,6 @@
       z-index: 1;
       outline: none;
 
-      @include screen-xx-large {
-        display: none;
-      }
-
       &:before {
         content: "";
         display: inline-block;
@@ -215,6 +261,15 @@
       &_right {
         right: -65px;
         transform: rotate(45deg);
+      }
+
+      @include screen-xx-large {
+        &_left {
+          left: -15px;
+        }
+        &_right {
+          right: -15px;
+        }
       }
     }
   }
