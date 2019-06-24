@@ -21,6 +21,14 @@
     align-items: center;
     position: relative;
 
+    @include screen-x-large {
+      max-width: $responsive-content-max;
+    }
+
+    @include screen-medium {
+      flex-direction: column;
+    }
+
     .btn-up {
       width: 41px;
       height: 41px;
@@ -31,6 +39,10 @@
 
       @include screen-xx-large {
         right: 5px;
+      }
+
+      @include screen-medium {
+        right: -5px;
       }
 
       &:before {
@@ -55,12 +67,25 @@
     .social-container {
       width: 50%;
 
+      @include screen-medium {
+        width: 75%;
+        margin: 0 auto 22px;
+      }
+
       .social {
         display: flex;
         flex-direction: row;
 
+        @include screen-medium {
+          justify-content: space-around;
+        }
+
         .social-item {
           margin-right: 34px;
+
+          @include screen-large {
+            margin-right: 20px;
+          }
 
           .social-logo {
             width: 28px;
@@ -111,14 +136,29 @@
       position: relative;
 
       .logo-image {
-        margin: 0px 24px 22px;
+        margin: 0 24px 22px;
         width: 50px;
         height: 50px;
+
+        @include screen-medium {
+          margin: 0 24px 10px;
+        }
       }
     }
 
     .copyright-container {
       width: 50%;
+      display: flex;
+
+      @include screen-x-large {
+        justify-content: flex-end;
+      }
+
+      @include screen-medium {
+        width: 100%;
+        margin-top: 25px;
+        justify-content: center;
+      }
 
       .copyright {
         padding-left: 172px;
@@ -126,8 +166,9 @@
         font-family: $font-secondary;
         font-weight: 300;
 
-        @include screen-medium {
-          padding: 0;
+        @include screen-x-large {
+          padding-left: 0;
+          text-align: end;
         }
       }
     }

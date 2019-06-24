@@ -156,6 +156,7 @@
           font-weight: 600;
           padding: 15px 28px;
           border: 1px solid $color-blog-btn;
+          border-radius: 0;
           text-align: center;
           text-decoration: none;
           text-transform: uppercase;
@@ -186,6 +187,7 @@
           font-family: $font-secondary;
           font-weight: 400;
           color: $color-feedback-text-input;
+          appearance: none;
 
           &::placeholder {
             font-style: italic;
