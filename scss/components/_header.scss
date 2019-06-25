@@ -13,11 +13,23 @@
     width: 100%;
     margin: 0 auto;
     position: relative;
+    z-index: 1;
 
     .mini-logo {
       position: absolute;
       right: 0px;
       top: 12px;
+    }
+
+    .background-blur {
+      background: $color-header-blur;
+      opacity: 0.5;
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -20%;
+      width: 200%;
+      height: 100vh;
     }
 
     @include screen-medium {
@@ -58,6 +70,11 @@
         transform: rotate(45deg);
         top: 10px;
         left: 15px;
+      }
+
+      .burger-checkbox:checked ~ .background-blur {
+        display: inline;
+        overflow: hidden;
       }
     }
 
