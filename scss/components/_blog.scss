@@ -23,8 +23,7 @@
 
       .title {
         color: $color-blog-text-primary;
-        font-size: 45px;
-        font-weight: 600;
+        @include fonts(45px, 600);
         text-align: center;
         text-transform: capitalize;
 
@@ -138,11 +137,10 @@
               text-align: start;
 
               .posts__title {
-                font-size: 25px;
+                @include fonts(25px, 400);
                 border-bottom: 1px solid $color-blog-border;
                 padding-bottom: 13px;
                 line-height: 30px;
-                font-weight: 400;
                 letter-spacing: 0.3px;
 
                 a {
@@ -156,10 +154,9 @@
               }
 
               .posts__info {
-                font-size: 14px;
+                @include fonts(14px, 400);
                 color: $color-blog-text-secondary;
                 font-family: $font-quote;
-                font-weight: 400;
                 margin-top: 15px;
 
                 .info-item {
@@ -202,20 +199,18 @@
               }
 
               .posts__description {
-                font-size: 14px;
+                @include fonts(14px, 400);
                 line-height: 25px;
                 color: $color-blog-text-subsecondary;
                 font-family: $font-quote;
-                font-weight: 400;
                 margin: 18px 0;
               }
 
               .btn {
-                font-size: 16px;
+                @include fonts(16px, 600);
                 background: transparent;
                 color: $color-blog-btn;
                 font-family: $font-primary;
-                font-weight: 600;
                 padding: 15px 28px;
                 border: 1px solid $color-blog-btn;
                 text-align: center;
@@ -235,56 +230,55 @@
       }
     }
 
-    .slider__arrow {
-      position: absolute;
-      top: 50%;
-      z-index: 1;
-      outline: none;
+    .arrows-wrapper {
+      display: flex;
+      flex-direction: row;
 
-      &:before {
-        content: "";
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border: solid $color-slider-arrow;
-        border-width: 2px 2px 0 0;
-        transition: all 0.2s ease;
-      }
-
-      &:hover:before {
-        border-color: $color-blog-btn;
-      }
-
-      &_left {
-        left: -65px;
-        transform: rotate(-135deg);
-      }
-
-      &_right {
-        right: -65px;
-        transform: rotate(45deg);
-      }
-
-      @include screen-xx-large {
-        top: 30%;
-
-        &_left {
-          left: 20px;
-        }
-
-        &_right {
-          right: 20px;
-        }
-      }
-
-      @include screen-x-large {
+      .arrow-container {
+        position: absolute;
         top: 50%;
+        z-index: 1;
+        outline: none;
+        width: 20px;
+        height: 32px;
+
+        @include screen-xx-large {
+          position: static;
+          margin: 20px auto 20px;
+        }
 
         &_left {
-          left: -8px;
+          left: -80px;
         }
+
         &_right {
-          right: -8px;
+          right: -80px;
+        }
+
+        .slider__arrow {
+          position: absolute;
+
+          &:before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: solid $color-slider-arrow;
+            border-width: 2px 2px 0 0;
+            transition: all 0.2s ease;
+          }
+
+          &:hover:before {
+            border-color: $color-gradient-right;
+          }
+
+          &_left {
+            transform: rotate(-135deg);
+          }
+
+          &_right {
+            transform: rotate(45deg);
+          }
         }
       }
     }

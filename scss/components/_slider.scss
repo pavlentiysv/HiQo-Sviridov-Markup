@@ -33,8 +33,7 @@
       }
 
       .slide-title {
-        font-size: 70px;
-        font-weight: 900;
+        @include fonts(70px, 900);
         position: relative;
         margin-bottom: 18px;
         padding-bottom: 39px;
@@ -65,8 +64,7 @@
 
       .slide-text {
         margin-top: 7px;
-        font-size: 50px;
-        font-weight: 100;
+        @include fonts(50px, 100);
         max-width: 910px;
         line-height: 62px;
         letter-spacing: 0.3px;
@@ -93,8 +91,7 @@
           color: $color-slider-text;
           border: 1px solid $color-slider-text;
           background-color: $color-slider-bg;
-          font-size: 16px;
-          font-weight: 200;
+          @include fonts(16px, 200);
           width: 150px;
           padding: 15px 0;
           cursor: pointer;
@@ -113,45 +110,58 @@
       }
     }
 
-    .slider__arrow {
+    .arrow-container {
       position: absolute;
       top: 50%;
       z-index: 1;
       outline: none;
+      width: 20px;
+      height: 32px;
 
-      &:before {
-        content: "";
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border: solid $color-slider-arrow;
-        border-width: 2px 2px 0 0;
-        transition: all 0.2s ease;
-      }
+      @include screen-xx-large {
+        position: static;
+        margin: 0 auto 20px;
 
-      &:hover:before {
-        border-color: $color-gradient-right;
+        &_left {
+          float: left;
+        }
+
+        &_right {
+          float: right;
+        }
       }
 
       &_left {
         left: -80px;
-        transform: rotate(-135deg);
       }
 
       &_right {
         right: -80px;
-        transform: rotate(45deg);
       }
 
-      @include screen-xx-large {
-        top: 85%;
+      .slider__arrow {
+        position: absolute;
+
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border: solid $color-slider-arrow;
+          border-width: 2px 2px 0 0;
+          transition: all 0.2s ease;
+        }
+
+        &:hover:before {
+          border-color: $color-gradient-right;
+        }
 
         &_left {
-          left: 0;
+          transform: rotate(-135deg);
         }
 
         &_right {
-          right: 0;
+          transform: rotate(45deg);
         }
       }
     }

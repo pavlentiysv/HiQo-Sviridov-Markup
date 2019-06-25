@@ -60,8 +60,7 @@
       }
 
       .stats-number {
-        font-size: 40px;
-        font-weight: 400;
+        @include fonts(40px, 400);
 
         @include screen-medium {
           font-size: 28px;
@@ -69,8 +68,7 @@
       }
 
       .stats-caption {
-        font-size: 25px;
-        font-weight: 300;
+        @include fonts(25px, 300);
         margin-top: 32px;
         margin-left: 85px;
 

@@ -12,11 +12,10 @@
     }
 
     .show-more-btn {
-      font-size: 16px;
+      @include fonts(16px, 600);
       background: transparent;
       color: $color-blog-btn;
       font-family: $font-primary;
-      font-weight: 600;
       padding: 15px 28px;
       border: 1px solid $color-blog-btn;
       text-align: center;
@@ -36,9 +35,8 @@
       margin: 0 auto;
 
       .title {
+        @include fonts(45px, 600);
         color: $color-portfolio-text-primary;
-        font-size: 45px;
-        font-weight: 600;
         text-align: center;
 
         @include screen-medium {
@@ -102,15 +100,13 @@
           position: relative;
 
           .item-title {
-            font-size: 20px;
+            @include fonts(20px, 600);
             letter-spacing: 0px;
-            font-weight: 600;
             padding-top: 46px;
           }
 
           .item-theme {
-            font-size: 15px;
-            font-weight: 400;
+            @include fonts(15px, 400);
             margin-top: 22px;
             padding-bottom: 64px;
           }

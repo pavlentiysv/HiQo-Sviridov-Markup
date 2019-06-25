@@ -13,9 +13,8 @@
 
     .content__header {
       .title {
+        @include fonts(45px, 600);
         color: $color-feedback-text-primary;
-        font-size: 45px;
-        font-weight: 600;
         font-family: $font-primary;
 
         @include screen-medium {
@@ -37,9 +36,8 @@
       }
 
       .note {
+        @include fonts(18px, 400);
         font-family: $font-secondary;
-        font-size: 18px;
-        font-weight: 400;
         color: $color-feedback-text-secondary;
 
         @include screen-medium {
@@ -131,10 +129,9 @@
 
           .contact-caption,
           .contact-label {
-            font-size: 14px;
+            @include fonts(14px, 400);
             line-height: 24px;
             font-family: $font-secondary;
-            font-weight: 400;
             color: $color-feedback-text-secondary;
           }
           .contact-caption:hover {
@@ -149,11 +146,10 @@
         flex-grow: 1;
 
         .btn-submit {
-          font-size: 16px;
+          @include fonts(16px, 600);
           background: transparent;
           color: $color-blog-btn;
           font-family: $font-primary;
-          font-weight: 600;
           padding: 15px 28px;
           border: 1px solid $color-blog-btn;
           border-radius: 0;
