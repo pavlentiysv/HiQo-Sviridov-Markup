@@ -1,0 +1,19 @@
+$breakpoints: (
+  xx-large: 1440px,
+  x-large: 1200px,
+  semi-large: 1080px,
+  large: 992px,
+  medium: 768px,
+  semi-small: 720px,
+  small: 576px,
+  x-small: 360px
+);
+
+$screen-x-small: 360px;
+$screen-small: 576px; // Small devices (landscape phones, 576px and up)
+$screen-semi-small: 720px; // Custom size
+$screen-medium: 768px; // Medium devices (tablets, 768px and up)
+$screen-large: 992px; // Large devices (desktops, 992px and up)
+$screen-semi-large: 1080px; // Custom size
+$screen-x-large: 1200px; // Extra large devices (large desktops, 1200px and up)
+$screen-xx-large: 1440px; // Custom size

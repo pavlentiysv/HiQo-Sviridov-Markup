@@ -2,45 +2,103 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Expire</title>    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Expire</title>
+
     
   <link rel="stylesheet" href="/assets/style.css" /></head>
-  
+
   <body>
+    <!-- Header Section -->
     <header class="header" id="page-top">
       <div class="header-container">
+        <div class="mini-logo visible-medium">
+          <a href="#">
+            <img
+              src="img/logo.png"
+              class="mini-logo__image"
+              alt="expire-logo"
+            />
+          </a>
+        </div>
+        <input type="checkbox" class="burger-checkbox hidden" id="check-menu" />
+        <label for="check-menu" class="burger-label visible-medium">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </label>
+        <label for="check-menu" class="background-blur"></label>
+
         <nav class="navigation">
           <ul class="menu">
-            <li class="menu-item"><a href="#home" class="menu-item__link">Home<span class="link-spanner"></span></a></li>
-            <li class="menu-item"><a href="#portfolio" class="menu-item__link">Portfolio<span class="link-spanner"></span></a></li>
-            <li class="menu-item"><a href="#blog" class="menu-item__link">Blog<span class="link-spanner"></span></a></li>
+            <li class="menu-item">
+              <a href="#home" class="menu-item__link">
+                Home
+                <span class="link-spanner"></span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#portfolio" class="menu-item__link">
+                Portfolio
+                <span class="link-spanner"></span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#blog" class="menu-item__link">
+                Blog
+                <span class="link-spanner"></span>
+              </a>
+            </li>
             <li class="menu-item logo-item">
               <div class="logo">
-                <img src="img/logo.png" class="logo-image" alt="logo" />
-                <p class="logo-text">Expire</p>
+                <img src="img/logo.png" class="logo-image" alt="expire-logo" />
+                <p class="logo-text hidden-large">Expire</p>
                 <a href="#"><span class="link-spanner"></span></a>
               </div>
             </li>
-            <li class="menu-item"><a href="#" class="menu-item__link">Pages<span class="link-spanner"></span></a></li>
-            <li class="menu-item"><a href="#" class="menu-item__link">About us<span class="link-spanner"></span></a></li>
-            <li class="menu-item"><a href="#feedback" class="menu-item__link">Contact<span class="link-spanner"></span></a></li>
+            <li class="menu-item">
+              <a href="#" class="menu-item__link">
+                Pages
+                <span class="link-spanner"></span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-item__link">
+                About us
+                <span class="link-spanner"></span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#feedback" class="menu-item__link">
+                Contact
+                <span class="link-spanner"></span>
+              </a>
+            </li>
           </ul>
-        </nav> 
+        </nav>
       </div>
     </header>
+    <!-- Header Section End -->
 
+    <!-- Slider Section -->
     <section class="slider" id="home">
       <div class="slider-content">
-        <a href="#" class="slider__arrow slider__arrow_left"></a>
-
         <div class="slider__slides">
-          <h1>Expire</h1>
-          <p>Professionaly designed, carefully made for your enjoyement</p>
+          <h1 class="slide-title">Expire</h1>
+          <p class="slide-text">
+            Professionaly designed, carefully made for your enjoyement
+          </p>
           <div class="slides__buttons">
             <button class="btn">Explore</button>
             <button class="btn">Learn more</button>
           </div>
+        </div>
+
+        <div class="arrow-container arrow-container_left">
+          <a href="#" class="slider__arrow slider__arrow_left"></a>
+        </div>
+        <div class="arrow-container arrow-container_right">
+          <a href="#" class="slider__arrow slider__arrow_right"></a>
         </div>
 
         <div class="slider__dots">
@@ -48,31 +106,35 @@
           <a href="#" class="slider__dot"></a>
           <a href="#" class="slider__dot"></a>
         </div>
-
-        <a href="#" class="slider__arrow slider__arrow_right"></a>
       </div>
     </section>
+    <!-- Slider Section End -->
 
+    <!-- Paralax Section -->
     <section class="paralax">
       <div class="paralax-content">
         <div class="content__header">
-          <h2>Paralax section</h2>
+          <h2 class="paralax-title">Paralax section</h2>
           <div class="content__underline"></div>
-          <p>
-            Exploring the unexplored is a risky business, but a rewarding one.</p>
+          <p class="paralax-quote">
+            Exploring the unexplored is a risky business, but a rewarding one.
+          </p>
         </div>
         <div class="content__quote">
           <blockquote>
-            <p>
+            <p class="quote-text">
               Design is in everything we make, but it's also between those
               things. It's a mix of craft, science, storytelling, propaganda,
-              and philosophy.</p>
-            <span>— Erik Adigard</span>
+              and philosophy.
+            </p>
+            <span class="quote-author">— Erik Adigard</span>
           </blockquote>
         </div>
       </div>
     </section>
+    <!-- Paralax Section End -->
 
+    <!-- Statistics Section -->
     <section class="statistics">
       <div class="statistics-content">
         <ul>
@@ -99,7 +161,9 @@
         </ul>
       </div>
     </section>
+    <!-- Statistics Section End -->
 
+    <!-- Blog Section -->
     <section class="latest-blog-post" id="blog">
       <div class="blog-content">
         <div class="content__header">
@@ -107,12 +171,12 @@
           <div class="content__underline"></div>
           <p class="quote">
             Information is a source of learning. But unless it is organized,
-            processed,<br />
+            processed,<br class="breaker hidden-x-large" />
             and available to the right people in a format for decision making,
-            it is a burden, not a benefit.</p>
+            it is a burden, not a benefit.
+          </p>
         </div>
         <div class="blog-slider">
-          <a href="#" class="slider__arrow slider__arrow_left"></a>
           <div class="slider__slides">
             <div class="posts">
               <div class="posts__item">
@@ -140,7 +204,8 @@
                       Ex vel ipsam provident rerum vitae deleniti tenetur alias!
                       Dignissimos dolores hic omnis tempore? Est, aperiam omnis.
                       Dignissimos dolores hic omnis tempore? Dignissimos dolores
-                      hic omnis tempore?</p>
+                      hic omnis tempore?
+                    </p>
                   </div>
                   <button class="btn">Read more</button>
                 </div>
@@ -169,7 +234,8 @@
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Ex, officiis numquam tenetur dicta mollitia nulla modi
                       eaque natus nemo odio aspernatur aliquid, iure optio.
-                      Dignissimos dolores hic omnis tempore?</p>
+                      Dignissimos dolores hic omnis tempore?
+                    </p>
                   </div>
                   <button class="btn">Read more</button>
                 </div>
@@ -199,24 +265,35 @@
                       Possimus eligendi corrupti earum suscipit repellendus
                       accusantium aliquid dignissimos natus reprehenderit nemo?
                       Dignissimos dolores hic omnis tempore? Dignissimos dolores
-                      hic omnis tempore?</p>
+                      hic omnis tempore?
+                    </p>
                   </div>
                   <button class="btn">Read more</button>
                 </div>
               </div>
             </div>
           </div>
-          <a href="#" class="slider__arrow slider__arrow_right"></a>
+          <div class="arrows-wrapper">
+            <div class="arrow-container arrow-container_left">
+              <a href="#" class="slider__arrow slider__arrow_left"></a>
+            </div>
+            <div class="arrow-container arrow-container_right">
+              <a href="#" class="slider__arrow slider__arrow_right"></a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    <!-- Blog Section End -->
 
+    <!-- Line Between Sections -->
     <div class="divider">
       <div class="left-line"></div>
       <div class="sloping-line"></div>
       <div class="right-line"></div>
     </div>
 
+    <!-- Portfolio Section -->
     <section class="latest-portfolio" id="portfolio">
       <div class="portfolio-content">
         <div class="content__header">
@@ -305,9 +382,12 @@
             </div>
           </div>
         </div>
+        <button class="show-more-btn visible-xx-large">Show More</button>
       </div>
     </section>
+    <!-- Portfolio Section End -->
 
+    <!-- Feedback Section -->
     <section class="feedback" id="feedback">
       <div class="feedback-content">
         <div class="content__header">
@@ -315,7 +395,8 @@
           <div class="content__underline"></div>
           <p class="note">
             Contact us, and we will contact you back. Want to chat? We can do
-            that too.</p>
+            that too.
+          </p>
         </div>
         <div class="content__main">
           <div class="contact">
@@ -391,26 +472,41 @@
                   placeholder="Message"
                 ></textarea>
               </div>
+              <div class="submit visible-large">
+                <input type="submit" class="btn-submit" value="SEND" />
+              </div>
             </form>
           </div>
         </div>
       </div>
     </section>
+    <!-- Feedback Section End -->
 
+    <!-- Footer Section -->
     <footer class="footer">
       <div class="footer-content">
         <div class="social-container">
           <ul class="social">
-            <li class="social-item"><a href="#" class="social-logo facebook-logo"></a></li>
-            <li class="social-item"><a href="#" class="social-logo twitter-logo"></a></li>
-            <li class="social-item"><a href="#" class="social-logo linkedin-logo"></a></li>
-            <li class="social-item"><a href="#" class="social-logo google-logo"></a></li>
-            <li class="social-item"><a href="#" class="social-logo instagram-logo"></a></li>
+            <li class="social-item">
+              <a href="#" class="social-logo facebook-logo"></a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-logo twitter-logo"></a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-logo linkedin-logo"></a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-logo google-logo"></a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-logo instagram-logo"></a>
+            </li>
           </ul>
         </div>
         <div class="logo">
-          <img src="img/logo.png" class="logo-image" alt="logo" />
-          <p>Expire</p>
+          <img src="img/logo.png" class="logo-image" alt="expire-logo" />
+          <p class="logo-text">Expire</p>
           <a href="#"><span class="link-spanner"></span></a>
         </div>
         <div class="copyright-container">
@@ -419,11 +515,12 @@
           </div>
         </div>
         <div class="btn-up">
-          <a href="#page-top">
+          <a href="#">
             <span class="link-spanner"></span>
           </a>
         </div>
       </div>
     </footer>
+    <!-- Footer Section End -->
   </body>
 </html>

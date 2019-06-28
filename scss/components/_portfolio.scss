@@ -7,14 +7,41 @@
     margin: 0 auto;
     padding-top: 52px;
 
+    @include screen-large {
+      padding-top: 36px;
+    }
+
+    .show-more-btn {
+      @include fonts(16px, 600);
+      background: transparent;
+      color: $color-blog-btn;
+      font-family: $font-primary;
+      padding: 15px 28px;
+      border: 1px solid $color-blog-btn;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      margin: 0 auto;
+
+      &:hover {
+        color: $color-blog-btn-text-hover;
+        background-color: $color-blog-btn;
+      }
+    }
+
     .content__header {
       margin: 0 auto;
 
       .title {
+        @include fonts(45px, 600);
         color: $color-portfolio-text-primary;
-        font-size: 45px;
-        font-weight: 600;
         text-align: center;
+
+        @include screen-medium {
+          font-size: 36px;
+        }
       }
 
       .content__underline {
@@ -30,12 +57,41 @@
     .portfolios {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       margin: 100px 0;
+
+      @include screen-large {
+        margin: 36px 0;
+      }
 
       .item-cell {
         background-color: $color-portfolio-bg-item;
         width: 25%;
         box-sizing: border-box;
+        min-width: 360px;
+
+        @include screen-xx-large {
+          &:nth-child(n + 7) {
+            display: none;
+          }
+        }
+
+        @include screen-semi-large {
+          &:nth-child(n + 5) {
+            display: none;
+          }
+        }
+
+        @include screen-semi-small {
+          &:nth-child(n + 3) {
+            display: none;
+          }
+        }
+
+        @include screen-x-small {
+          min-width: 0;
+          width: 100%;
+        }
 
         .portfolios__item {
           font-family: $font-secondary;
@@ -44,15 +100,13 @@
           position: relative;
 
           .item-title {
-            font-size: 20px;
+            @include fonts(20px, 600);
             letter-spacing: 0px;
-            font-weight: 600;
             padding-top: 46px;
           }
 
           .item-theme {
-            font-size: 15px;
-            font-weight: 400;
+            @include fonts(15px, 400);
             margin-top: 22px;
             padding-bottom: 64px;
           }

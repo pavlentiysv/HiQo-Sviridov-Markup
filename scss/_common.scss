@@ -2,6 +2,26 @@ a {
   text-decoration: none;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .content__underline {
   width: 100px; //6rem
   height: 1px;
@@ -51,4 +71,32 @@ a {
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.hidden {
+  display: none;
+
+  @each $breakpnt, $size in $breakpoints {
+    @media screen and (max-width: $size) {
+      &-#{$breakpnt} {
+        display: none;
+      }
+    }
+  }
+}
+
+.visible {
+  @each $breakpnt, $size in $breakpoints {
+    &-#{$breakpnt} {
+      display: none;
+    }
+  }
+
+  @each $breakpnt, $size in $breakpoints {
+    @media screen and (max-width: $size) {
+      &-#{$breakpnt} {
+        display: block;
+      }
+    }
+  }
 }

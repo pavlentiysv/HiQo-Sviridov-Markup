@@ -7,24 +7,37 @@
   display: flex;
   justify-content: center;
 
+  @include screen-large {
+    padding: 48px 0 56px;
+  }
+
   .paralax-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: $width-content-common;
 
+    @include screen-x-large {
+      max-width: $responsive-content-max;
+    }
+
     .content__header {
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      h2 {
-        font-size: 45px;
-        font-weight: 600;
+      .paralax-title {
+        @include fonts(45px, 600);
+
+        @include screen-medium {
+          font-size: 36px;
+          text-align: center;
+        }
       }
 
-      p {
+      .paralax-quote {
         font-size: 18px;
+        text-align: center;
       }
 
       .content__underline {
@@ -39,13 +52,20 @@
       font-weight: 300;
       padding-left: 25px;
 
-      p {
+      .quote-text {
         font-style: italic;
         font-size: 30px;
         letter-spacing: 0.3px;
         line-height: 42px;
         margin: 80px 0 44px;
         position: relative;
+
+        @include screen-medium {
+          margin: 40px 0 30px;
+          line-height: 36px;
+          font-size: 24px;
+          letter-spacing: 0px;
+        }
 
         &:before {
           content: "‘‘";
@@ -60,7 +80,7 @@
         }
       }
 
-      span {
+      .quote-author {
         font-size: 30px;
       }
     }
