@@ -84,27 +84,53 @@
     <section class="slider" id="home">
       <div class="slider-content">
         <div class="slider__slides">
-          <h1 class="slide-title">Expire</h1>
-          <p class="slide-text">
-            Professionaly designed, carefully made for your enjoyement
-          </p>
-          <div class="slides__buttons">
-            <button class="btn">Explore</button>
-            <button class="btn">Learn more</button>
+
+          <div class="slider_slide fade">
+            <h1 class="slide-title">Expire</h1>
+            <p class="slide-text">
+              Professionaly designed, carefully made for your enjoyement
+            </p>
+            <div class="slides__buttons">
+              <button class="btn">Explore</button>
+              <button class="btn">Learn more</button>
+            </div>
           </div>
+
+          <div class="slider_slide fade">
+            <h1 class="slide-title">Expire</h1>
+            <p class="slide-text">
+              SECOND SLIDES WORKS AAAAAAAAA
+            </p>
+            <div class="slides__buttons">
+              <button class="btn">Explore</button>
+              <button class="btn">Learn more</button>
+            </div>
+          </div>
+
+          <div class="slider_slide fade">
+            <h1 class="slide-title">Expire</h1>
+            <p class="slide-text">
+              THIRD SLIDE WORKS AEEEEEE
+            </p>
+            <div class="slides__buttons">
+              <button class="btn">Explore</button>
+              <button class="btn">Learn more</button>
+            </div>
+          </div>
+
         </div>
 
         <div class="arrow-container arrow-container_left">
-          <a href="#" class="slider__arrow slider__arrow_left"></a>
+          <a class="slider__arrow slider__arrow_left" onclick="plusSlides(-1)"></a>
         </div>
         <div class="arrow-container arrow-container_right">
-          <a href="#" class="slider__arrow slider__arrow_right"></a>
+          <a class="slider__arrow slider__arrow_right" onclick="plusSlides(1)"></a>
         </div>
 
         <div class="slider__dots">
-          <a href="#" class="slider__dot slider__dot_active"></a>
-          <a href="#" class="slider__dot"></a>
-          <a href="#" class="slider__dot"></a>
+          <a class="slider__dot" onclick="currentSlide(1)"></a>
+          <a class="slider__dot" onclick="currentSlide(2)"></a>
+          <a class="slider__dot" onclick="currentSlide(3)"></a>
         </div>
       </div>
     </section>
@@ -522,5 +548,7 @@
       </div>
     </footer>
     <!-- Footer Section End -->
+
+    <script src="/js/slider.js"></script>
   </body>
 </html>
