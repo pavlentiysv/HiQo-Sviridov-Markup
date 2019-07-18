@@ -73,9 +73,12 @@
       }
 
       .slider__slides {
+        overflow: hidden;
+
         .posts {
           font-size: 0;
-          text-align: center;
+          text-align: left;
+          width: calc(34% * 4);
 
           .posts__item {
             display: inline-block;
@@ -85,22 +88,6 @@
             padding: 0 $padding-blog-posts;
             max-width: 400px;
 
-            @include screen-x-large {
-              width: 50%;
-
-              &:nth-child(n + 3) {
-                display: none;
-              }
-            }
-
-            @include screen-large {
-              width: 100%;
-
-              &:nth-child(n + 2) {
-                display: none;
-              }
-            }
-
             .folder {
               background-color: $color-blog-bg-secondary;
               width: 100%;
@@ -109,7 +96,7 @@
               margin-top: 36px;
 
               &:before {
-                content: "";
+                content: '';
                 position: absolute;
                 left: 0;
                 top: -36px;
@@ -119,7 +106,7 @@
               }
 
               &:after {
-                content: "";
+                content: '';
                 position: absolute;
                 left: 45%;
                 top: -36px;
@@ -172,7 +159,7 @@
                 }
 
                 &:after {
-                  content: "";
+                  content: '';
                   display: table;
                   clear: both;
                 }
@@ -186,14 +173,14 @@
                 }
 
                 .icon-user {
-                  background: url("../../img/user_icon.png") no-repeat top left;
+                  background: url('../../img/user_icon.png') no-repeat top left;
                 }
                 .icon-calendar {
-                  background: url("../../img/calendar_icon.png") no-repeat top
+                  background: url('../../img/calendar_icon.png') no-repeat top
                     left;
                 }
                 .icon-comment {
-                  background: url("../../img/comment_icon.png") no-repeat top
+                  background: url('../../img/comment_icon.png') no-repeat top
                     left;
                 }
               }
@@ -259,7 +246,7 @@
           position: absolute;
 
           &:before {
-            content: "";
+            content: '';
             display: inline-block;
             width: 20px;
             height: 20px;

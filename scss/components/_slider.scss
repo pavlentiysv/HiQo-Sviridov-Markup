@@ -29,8 +29,20 @@
       margin: 100px 0 70px;
       min-height: 424px;
 
+      .easter-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .easter {
+        width: 60%;
+        margin-top: 68px;
+      }
+
       @include screen-large {
         margin: 0;
+        min-height: 286px;
       }
 
       .slide-title {
@@ -46,7 +58,7 @@
         }
 
         &:after {
-          content: "";
+          content: '';
           position: absolute;
           left: 0;
           bottom: 0;
@@ -145,7 +157,7 @@
         cursor: pointer;
 
         &:before {
-          content: "";
+          content: '';
           display: inline-block;
           width: 20px;
           height: 20px;
