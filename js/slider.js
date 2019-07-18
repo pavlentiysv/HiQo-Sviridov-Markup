@@ -1,3 +1,18 @@
+const slides = document.getElementsByClassName('slider_slide');
+const sliderContent = document.getElementById('home-slider');
+
+//creating dots
+
+let dotsDiv = document.createElement('div');
+dotsDiv.className = 'slider__dots';
+for (let i = 0; i < slides.length; i++) {
+  dotsDiv.innerHTML += `<a class="slider__dot" onclick="currentSlide(${i +
+    1})"></a>`;
+}
+sliderContent.append(dotsDiv);
+
+//
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -11,8 +26,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i = 0;
-  let slides = document.getElementsByClassName('slider_slide');
-  let dots = document.getElementsByClassName('slider__dot');
+  const dots = document.getElementsByClassName('slider__dot');
 
   if (n > slides.length) {
     slideIndex = 1;
