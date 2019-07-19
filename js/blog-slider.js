@@ -10,6 +10,8 @@
     this.slides = document.getElementsByClassName('posts__item');
     this.arrows = document.getElementsByClassName('blog-arrow');
 
+    this.slidesBox.style.width = 'calc(' + slideSize * this.slides.length + ')';
+
     this.carousel();
   }
 
