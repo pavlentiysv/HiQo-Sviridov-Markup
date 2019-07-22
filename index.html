@@ -82,57 +82,51 @@
 
     <!-- Slider Section -->
     <section class="slider" id="home">
-      <div class="slider-content" id="home-slider">
-        <div class="slider__slides">
+      <div class="slider-wrapper">
+        <div class="slider-content" id="home-slider">
+          <div class="slider-box">
+            <div class="slider__slides slides">
+              <div class="slider_slide slide">
+                <h1 class="slide-title">Expire</h1>
+                <p class="slide-text">
+                  Professionaly designed, carefully made for your enjoyement
+                </p>
+                <div class="slides__buttons">
+                  <button class="btn">Explore</button>
+                  <button class="btn">Learn more</button>
+                </div>
+              </div>
 
-          <div class="slider_slide fade">
-            <h1 class="slide-title">Expire</h1>
-            <p class="slide-text">
-              Professionaly designed, carefully made for your enjoyement
-            </p>
-            <div class="slides__buttons">
-              <button class="btn">Explore</button>
-              <button class="btn">Learn more</button>
+              <div class="slider_slide slide">
+                <h1 class="slide-title">Expire</h1>
+                <p class="slide-text">
+                  SECOND SLIDES WORKS AAAAAAAAA
+                </p>
+                <div class="slides__buttons">
+                  <button class="btn">Explore</button>
+                  <button class="btn">Learn more</button>
+                </div>
+              </div>
+
+              <div class="slider_slide slide">
+                <h1 class="slide-title">Expire</h1>
+                <p class="slide-text">
+                  THIRD SLIDE WORKS AEEEEEE
+                </p>
+                <div class="slides__buttons">
+                  <button class="btn">Explore</button>
+                  <button class="btn">Learn more</button>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="slider_slide fade">
-            <h1 class="slide-title">Expire</h1>
-            <p class="slide-text">
-              SECOND SLIDES WORKS AAAAAAAAA
-            </p>
-            <div class="slides__buttons">
-              <button class="btn">Explore</button>
-              <button class="btn">Learn more</button>
-            </div>
+          <div class="arrow-container arrow-container_left">
+            <a class="slider__arrow slider__arrow_left"></a>
           </div>
-
-          <div class="slider_slide fade">
-            <h1 class="slide-title">Expire</h1>
-            <p class="slide-text">
-              THIRD SLIDE WORKS AEEEEEE
-            </p>
-            <div class="slides__buttons">
-              <button class="btn">Explore</button>
-              <button class="btn">Learn more</button>
-            </div>
+          <div class="arrow-container arrow-container_right">
+            <a class="slider__arrow slider__arrow_right"></a>
           </div>
-
-          <div class="slider_slide fade">
-            <div class="easter-container">
-              <img src="/img/GeneralKenobi.jpg" alt="hello there!" class="easter">
-            </div>
-          </div>
-
         </div>
-
-        <div class="arrow-container arrow-container_left">
-          <a class="slider__arrow slider__arrow_left" onclick="plusSlides(-1)"></a>
-        </div>
-        <div class="arrow-container arrow-container_right">
-          <a class="slider__arrow slider__arrow_right" onclick="plusSlides(1)"></a>
-        </div>
-
       </div>
     </section>
     <!-- Slider Section End -->
@@ -205,10 +199,9 @@
         </div>
 
         <div class="blog-slider">
-          <div class="blog-slider__slides">
-            <div class="posts">
-
-              <div class="posts__item">
+          <div class="blog-slider__slides" id="blog-slider-container">
+            <div class="posts slides">
+              <div class="posts__item slide">
                 <div class="folder"></div>
                 <div class="post-content">
                   <h3 class="posts__title">
@@ -240,7 +233,7 @@
                 </div>
               </div>
 
-              <div class="posts__item">
+              <div class="posts__item slide">
                 <div class="folder"></div>
                 <div class="post-content">
                   <h3 class="posts__title">
@@ -271,7 +264,7 @@
                 </div>
               </div>
 
-              <div class="posts__item">
+              <div class="posts__item slide">
                 <div class="folder"></div>
                 <div class="post-content">
                   <h3 class="posts__title">
@@ -302,8 +295,8 @@
                   <button class="btn">Read more</button>
                 </div>
               </div>
-              
-              <div class="posts__item">
+
+              <div class="posts__item slide">
                 <div class="folder"></div>
                 <div class="post-content">
                   <h3 class="posts__title">
@@ -335,7 +328,7 @@
                 </div>
               </div>
 
-              <div class="posts__item">
+              <div class="posts__item slide">
                 <div class="folder"></div>
                 <div class="post-content">
                   <h3 class="posts__title">
@@ -366,8 +359,8 @@
                   <button class="btn">Read more</button>
                 </div>
               </div>
-              
-              <div class="posts__item">
+
+              <div class="posts__item slide">
                 <div class="folder"></div>
                 <div class="post-content">
                   <h3 class="posts__title">
@@ -398,15 +391,14 @@
                   <button class="btn">Read more</button>
                 </div>
               </div>
-              
             </div>
-          </div>
-          <div class="arrows-wrapper">
-            <div class="arrow-container arrow-container_left">
-              <a class="slider__arrow slider__arrow_left blog-arrow" id="previous"></a>
-            </div>
-            <div class="arrow-container arrow-container_right">
-              <a class="slider__arrow slider__arrow_right blog-arrow" id="next"></a>
+            <div class="arrows-wrapper">
+              <div class="arrow-container arrow-container_left">
+                <a class="slider__arrow slider__arrow_left"></a>
+              </div>
+              <div class="arrow-container arrow-container_right">
+                <a class="slider__arrow slider__arrow_right"></a>
+              </div>
             </div>
           </div>
         </div>
@@ -652,6 +644,5 @@
     <!-- Footer Section End -->
 
     <script src="/js/slider.js"></script>
-    <script src="/js/blog-slider.js"></script>
   </body>
 </html>

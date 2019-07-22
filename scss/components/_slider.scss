@@ -2,14 +2,21 @@
   background: $color-slider-bg;
   position: relative;
 
+  .slider-wrapper {
+    max-width: $width-content-common;
+    margin: 0 auto;
+  }
+
   .slider-content {
     font-family: $font-primary;
     color: $color-slider-text;
-    margin: 0 auto;
     padding: 59px 0;
-    max-width: $width-content-common;
     letter-spacing: 1px;
     position: relative;
+
+    .slider-box {
+      overflow: hidden;
+    }
 
     @include screen-large {
       padding: 30px 0 60px;
@@ -25,24 +32,17 @@
 
     .slider__slides {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       margin: 100px 0 70px;
       min-height: 424px;
-
-      .easter-container {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-      }
-
-      .easter {
-        width: 60%;
-        margin-top: 68px;
-      }
 
       @include screen-large {
         margin: 0;
         min-height: 286px;
+      }
+
+      .slider_slide {
+        width: 100%;
       }
 
       .slide-title {
@@ -180,12 +180,13 @@
       }
     }
 
-    .slider__dots {
-      display: flex;
-      justify-content: center;
-      padding: 8px 0 5px;
-    }
   }
+}
+
+.slider__dots {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 5px;
 }
 
 .slider__dot {
