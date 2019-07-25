@@ -82,29 +82,34 @@
 
     <!-- Slider Section -->
     <section class="slider" id="home">
-      <div class="slider-content">
-        <div class="slider__slides">
-          <h1 class="slide-title">Expire</h1>
-          <p class="slide-text">
-            Professionaly designed, carefully made for your enjoyement
-          </p>
-          <div class="slides__buttons">
-            <button class="btn">Explore</button>
-            <button class="btn">Learn more</button>
+      <div class="slider-wrapper">
+        <div class="slider-content" id="home-slider">
+          <div class="slider-box">
+            <div class="slider__slides slides">
+
+              <script id="home-slider-template" type="text/x-handlebars-template">
+                {{#each homeSlides}}
+                <div class="slider_slide slide">
+                  <h1 class="slide-title">{{slideTitle}}</h1>
+                  <p class="slide-text">
+                    {{slideText}}
+                  </p>
+                  <div class="slides__buttons">
+                    <button class="btn">Explore</button>
+                    <button class="btn">Learn more</button>
+                  </div>
+                </div>
+                {{/each}}
+              </script>
+
+            </div>
           </div>
-        </div>
-
-        <div class="arrow-container arrow-container_left">
-          <a href="#" class="slider__arrow slider__arrow_left"></a>
-        </div>
-        <div class="arrow-container arrow-container_right">
-          <a href="#" class="slider__arrow slider__arrow_right"></a>
-        </div>
-
-        <div class="slider__dots">
-          <a href="#" class="slider__dot slider__dot_active"></a>
-          <a href="#" class="slider__dot"></a>
-          <a href="#" class="slider__dot"></a>
+          <div class="arrow-container arrow-container_left">
+            <a class="slider__arrow slider__arrow_left"></a>
+          </div>
+          <div class="arrow-container arrow-container_right">
+            <a class="slider__arrow slider__arrow_right"></a>
+          </div>
         </div>
       </div>
     </section>
@@ -176,10 +181,11 @@
             it is a burden, not a benefit.
           </p>
         </div>
+
         <div class="blog-slider">
-          <div class="slider__slides">
-            <div class="posts">
-              <div class="posts__item">
+          <div class="blog-slider__slides" id="blog-slider-container">
+            <div class="posts slides">
+              <div class="posts__item slide">
                 <div class="folder"></div>
                 <div class="post-content">
                   <h3 class="posts__title">
@@ -210,7 +216,8 @@
                   <button class="btn">Read more</button>
                 </div>
               </div>
-              <div class="posts__item">
+
+              <div class="posts__item slide">
                 <div class="folder"></div>
                 <div class="post-content">
                   <h3 class="posts__title">
@@ -240,7 +247,8 @@
                   <button class="btn">Read more</button>
                 </div>
               </div>
-              <div class="posts__item">
+
+              <div class="posts__item slide">
                 <div class="folder"></div>
                 <div class="post-content">
                   <h3 class="posts__title">
@@ -271,14 +279,110 @@
                   <button class="btn">Read more</button>
                 </div>
               </div>
+
+              <div class="posts__item slide">
+                <div class="folder"></div>
+                <div class="post-content">
+                  <h3 class="posts__title">
+                    <a href="">To Work in HiQo</a>
+                  </h3>
+                  <div class="posts__info">
+                    <ul>
+                      <li class="info-item">
+                        <i class="small-icon icon-user"></i>By Author
+                      </li>
+                      <li class="info-item">
+                        <i class="small-icon icon-calendar"></i>10 June 2014
+                      </li>
+                      <li class="info-item">
+                        <i class="small-icon icon-comment"></i>0
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="posts__description">
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Possimus eligendi corrupti earum suscipit repellendus
+                      accusantium aliquid dignissimos natus reprehenderit nemo?
+                      Dignissimos dolores hic omnis tempore? Dignissimos dolores
+                      hic omnis tempore?
+                    </p>
+                  </div>
+                  <button class="btn">Read more</button>
+                </div>
+              </div>
+
+              <div class="posts__item slide">
+                <div class="folder"></div>
+                <div class="post-content">
+                  <h3 class="posts__title">
+                    <a href="">Hire Me</a>
+                  </h3>
+                  <div class="posts__info">
+                    <ul>
+                      <li class="info-item">
+                        <i class="small-icon icon-user"></i>By Author
+                      </li>
+                      <li class="info-item">
+                        <i class="small-icon icon-calendar"></i>10 June 2014
+                      </li>
+                      <li class="info-item">
+                        <i class="small-icon icon-comment"></i>0
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="posts__description">
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Possimus eligendi corrupti earum suscipit repellendus
+                      accusantium aliquid dignissimos natus reprehenderit nemo?
+                      Dignissimos dolores hic omnis tempore? Dignissimos dolores
+                      hic omnis tempore?
+                    </p>
+                  </div>
+                  <button class="btn">Read more</button>
+                </div>
+              </div>
+
+              <div class="posts__item slide">
+                <div class="folder"></div>
+                <div class="post-content">
+                  <h3 class="posts__title">
+                    <a href="">Please ;)</a>
+                  </h3>
+                  <div class="posts__info">
+                    <ul>
+                      <li class="info-item">
+                        <i class="small-icon icon-user"></i>By Author
+                      </li>
+                      <li class="info-item">
+                        <i class="small-icon icon-calendar"></i>10 June 2014
+                      </li>
+                      <li class="info-item">
+                        <i class="small-icon icon-comment"></i>0
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="posts__description">
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Possimus eligendi corrupti earum suscipit repellendus
+                      accusantium aliquid dignissimos natus reprehenderit nemo?
+                      Dignissimos dolores hic omnis tempore? Dignissimos dolores
+                      hic omnis tempore?
+                    </p>
+                  </div>
+                  <button class="btn">Read more</button>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="arrows-wrapper">
-            <div class="arrow-container arrow-container_left">
-              <a href="#" class="slider__arrow slider__arrow_left"></a>
-            </div>
-            <div class="arrow-container arrow-container_right">
-              <a href="#" class="slider__arrow slider__arrow_right"></a>
+            <div class="arrows-wrapper">
+              <div class="arrow-container arrow-container_left">
+                <a class="slider__arrow slider__arrow_left"></a>
+              </div>
+              <div class="arrow-container arrow-container_right">
+                <a class="slider__arrow slider__arrow_right"></a>
+              </div>
             </div>
           </div>
         </div>
@@ -301,86 +405,20 @@
           <div class="content__underline"></div>
         </div>
         <div class="portfolios">
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
+          <script id="porfolio-template" type="text/x-handlebars-template">
+            {{#each portfolioItems}}
+            <div class="item-cell">
+              <div class="portfolios__item">
+                <h3 class="item-title">{{title}}</h3>
+                <p class="item-theme">{{theme}}</p>
+              </div>
+              <div class="panel">
+                <i class="panel__icon link-icon"></i>
+                <i class="panel__icon zoom-icon"></i>
+              </div>
             </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
-            </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
-            </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
-            </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
-            </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
-            </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
-            </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
-            </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
+            {{/each}}
+          </script>
         </div>
         <button class="show-more-btn visible-xx-large">Show More</button>
       </div>
@@ -522,5 +560,10 @@
       </div>
     </footer>
     <!-- Footer Section End -->
+    <script src="/js/handlebars-v4.1.2.js"></script>
+    <script src="/js/home-slider-handler.js"></script>
+    <script src="/js/portfolio-handler.js"></script>
+    <script src="/js/slider.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
