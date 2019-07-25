@@ -30,7 +30,7 @@ Slider.prototype.createDots = function sliderCreateDots() {
   that.dots = dotsDiv.getElementsByClassName('slider__dot');
   that.dots[that.index].className += ' slider__dot_active';
 
-  dotsDiv.onclick = function delegateEvent(event) {
+  function delegateEvent(event) {
     const index = event.target.getAttribute('data-index');
     that.slidesBox.style.transform = `translateX(${-that.slideSize * index}px)`;
     that.slidesBox.style.transition = '0.3s ease-in-out';
@@ -41,7 +41,9 @@ Slider.prototype.createDots = function sliderCreateDots() {
       );
     }
     that.dots[index].className += ' slider__dot_active';
-  };
+  }
+
+  dotsDiv.addEventListener('click', delegateEvent);
 
   that.box.append(dotsDiv);
 };
@@ -53,62 +55,59 @@ Slider.prototype.carousel = function sliderCarousel() {
 };
 
 Slider.previous = function previousSlide(box) {
-  const boxx = box;
-  boxx.slidesBox.style.transition = '0.3s ease-in-out';
-  if (boxx.index > 0) {
-    boxx.index -= 1;
+  const copiedBox = box;
+  copiedBox.slidesBox.style.transition = '0.3s ease-in-out';
+  if (copiedBox.index > 0) {
+    copiedBox.index -= 1;
   }
 
-  if (boxx.isDotsRequired) {
-    for (let i = 0; i < boxx.dots.length; i += 1) {
-      boxx.dots[i].className = boxx.dots[i].className.replace(
+  if (copiedBox.isDotsRequired) {
+    for (let i = 0; i < copiedBox.dots.length; i += 1) {
+      copiedBox.dots[i].className = copiedBox.dots[i].className.replace(
         'slider__dot_active',
         ''
       );
     }
-    boxx.dots[boxx.index].className += ' slider__dot_active';
+    copiedBox.dots[copiedBox.index].className += ' slider__dot_active';
   }
 
-  boxx.slidesBox.style.transform = `translateX(${-boxx.slideSize *
-    boxx.index}px)`;
+  copiedBox.slidesBox.style.transform = `translateX(${-copiedBox.slideSize *
+    copiedBox.index}px)`;
 };
 
 Slider.next = function nextSlide(box) {
-  const boxx = box;
+  const copiedBox = box;
   let max = 0;
   const sliderVisibleSize = document.querySelector('.blog-slider__slides')
     .clientWidth;
-  boxx.slidesBox.style.transition = '0.3s ease-in-out';
+  copiedBox.slidesBox.style.transition = '0.3s ease-in-out';
   // checking wrapper size to prevent extra movement
-  if (boxx.isMoreThanOneSlide) {
+  if (copiedBox.isMoreThanOneSlide) {
     if (sliderVisibleSize >= 1200) {
-      max = boxx.slides.length - 3;
+      max = copiedBox.slides.length - 3;
     } else if (sliderVisibleSize >= 800) {
-      max = boxx.slides.length - 2;
+      max = copiedBox.slides.length - 2;
     } else {
-      max = boxx.slides.length - 1;
+      max = copiedBox.slides.length - 1;
     }
   } else {
-    max = boxx.slides.length - 1;
+    max = copiedBox.slides.length - 1;
   }
 
-  if (boxx.index < max) {
-    boxx.index += 1;
+  if (copiedBox.index < max) {
+    copiedBox.index += 1;
   }
 
-  if (boxx.isDotsRequired) {
-    for (let i = 0; i < boxx.dots.length; i += 1) {
-      boxx.dots[i].className = boxx.dots[i].className.replace(
+  if (copiedBox.isDotsRequired) {
+    for (let i = 0; i < copiedBox.dots.length; i += 1) {
+      copiedBox.dots[i].className = copiedBox.dots[i].className.replace(
         'slider__dot_active',
         ''
       );
     }
-    boxx.dots[boxx.index].className += ' slider__dot_active';
+    copiedBox.dots[copiedBox.index].className += ' slider__dot_active';
   }
 
-  boxx.slidesBox.style.transform = `translateX(${-boxx.slideSize *
-    boxx.index}px)`;
+  copiedBox.slidesBox.style.transform = `translateX(${-copiedBox.slideSize *
+    copiedBox.index}px)`;
 };
-
-new Slider('home-slider', false, true);
-new Slider('blog-slider-container', true, false);

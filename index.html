@@ -86,38 +86,22 @@
         <div class="slider-content" id="home-slider">
           <div class="slider-box">
             <div class="slider__slides slides">
-              <div class="slider_slide slide">
-                <h1 class="slide-title">Expire</h1>
-                <p class="slide-text">
-                  Professionaly designed, carefully made for your enjoyement
-                </p>
-                <div class="slides__buttons">
-                  <button class="btn">Explore</button>
-                  <button class="btn">Learn more</button>
-                </div>
-              </div>
 
-              <div class="slider_slide slide">
-                <h1 class="slide-title">Expire</h1>
-                <p class="slide-text">
-                  SECOND SLIDES WORKS AAAAAAAAA
-                </p>
-                <div class="slides__buttons">
-                  <button class="btn">Explore</button>
-                  <button class="btn">Learn more</button>
+              <script id="home-slider-template" type="text/x-handlebars-template">
+                {{#each homeSlides}}
+                <div class="slider_slide slide">
+                  <h1 class="slide-title">{{slideTitle}}</h1>
+                  <p class="slide-text">
+                    {{slideText}}
+                  </p>
+                  <div class="slides__buttons">
+                    <button class="btn">Explore</button>
+                    <button class="btn">Learn more</button>
+                  </div>
                 </div>
-              </div>
+                {{/each}}
+              </script>
 
-              <div class="slider_slide slide">
-                <h1 class="slide-title">Expire</h1>
-                <p class="slide-text">
-                  THIRD SLIDE WORKS AEEEEEE
-                </p>
-                <div class="slides__buttons">
-                  <button class="btn">Explore</button>
-                  <button class="btn">Learn more</button>
-                </div>
-              </div>
             </div>
           </div>
           <div class="arrow-container arrow-container_left">
@@ -421,86 +405,20 @@
           <div class="content__underline"></div>
         </div>
         <div class="portfolios">
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
+          <script id="porfolio-template" type="text/x-handlebars-template">
+            {{#each portfolioItems}}
+            <div class="item-cell">
+              <div class="portfolios__item">
+                <h3 class="item-title">{{title}}</h3>
+                <p class="item-theme">{{theme}}</p>
+              </div>
+              <div class="panel">
+                <i class="panel__icon link-icon"></i>
+                <i class="panel__icon zoom-icon"></i>
+              </div>
             </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
-            </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
-            </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
-            </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
-            </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
-            </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
-            </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
-          <div class="item-cell">
-            <div class="portfolios__item">
-              <h3 class="item-title">Big city</h3>
-              <p class="item-theme">Art, Photography, City</p>
-            </div>
-            <div class="panel">
-              <i class="panel__icon link-icon"></i>
-              <i class="panel__icon zoom-icon"></i>
-            </div>
-          </div>
+            {{/each}}
+          </script>
         </div>
         <button class="show-more-btn visible-xx-large">Show More</button>
       </div>
@@ -642,7 +560,10 @@
       </div>
     </footer>
     <!-- Footer Section End -->
-
+    <script src="/js/handlebars-v4.1.2.js"></script>
+    <script src="/js/home-slider-handler.js"></script>
+    <script src="/js/portfolio-handler.js"></script>
     <script src="/js/slider.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
