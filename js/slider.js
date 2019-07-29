@@ -18,6 +18,8 @@ function Slider(sliderId, isMoreThanOneSlide, isDotsRequired) {
   if (this.isDotsRequired) {
     this.createDots();
   }
+
+  return this;
 }
 
 Slider.prototype.createDots = function sliderCreateDots() {
