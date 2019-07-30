@@ -16,16 +16,15 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 
-.cells-container__inner {
+.cells-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
-  margin: 30px 0;
+  justify-content: center;
+  margin: 40px 0;
 }
 
 .loading-cell {
@@ -33,6 +32,7 @@
   padding: 20px;
   color: white;
   @include fonts(16px, 600);
+  margin: 10px;
 }
 
 .load-more-btn {

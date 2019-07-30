@@ -17,12 +17,6 @@
       "title": "Post 3",
       "description": "Some description...",
       "likes": 1312
-    },
-    {
-      "id": 4,
-      "title": "Post 4",
-      "description": "Some description...",
-      "likes": 13124
     }
   ]
 }

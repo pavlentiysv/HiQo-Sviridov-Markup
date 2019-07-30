@@ -1,26 +1,25 @@
 (function loadingWrapper() {
   function compileLoadedData(someData) {
-    const rawTemplate = document.getElementById('loading-template').innerHTML;
-    const compiledTemplate = Handlebars.compile(rawTemplate);
-    const ourGeneratedHTML = compiledTemplate(someData);
-    const ourGeneratedHTMLContainer = document.createElement('div');
-    ourGeneratedHTMLContainer.className = 'cells-container__inner';
-    ourGeneratedHTMLContainer.innerHTML = ourGeneratedHTML;
-    const cellboxContainer = document.getElementById('cells-container');
-    cellboxContainer.appendChild(ourGeneratedHTMLContainer);
+    someData.loadingContent.forEach(element => {
+      const generatedHTMLContainer = document.createElement('div');
+      generatedHTMLContainer.innerHTML = TemplateService.compileTemplate(
+        'loading-template',
+        element
+      );
+      const cellboxContainer = document.getElementById('cells-container');
+      cellboxContainer.appendChild(generatedHTMLContainer.firstChild);
+    });
   }
 
   function loadData() {
     const loader = document.getElementById('loader');
     loader.style.display = 'block';
-    fetch('../assets/content/loading-content.json')
-      .then(response => response.json())
-      .then((data) => {
-        if (data) {
-          loader.style.display = 'none';
-        }
-        compileLoadedData(data);
-      });
+    DataService.getData('loading-content').then(data => {
+      if (data) {
+        loader.style.display = 'none';
+      }
+      compileLoadedData(data);
+    });
   }
 
   loadData();

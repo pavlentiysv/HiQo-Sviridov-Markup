@@ -19,5 +19,8 @@
     "gulp-html": "^0.7.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-sass": "3.2.1"
+  },
+  "dependencies": {
+    "handlebars": "^4.1.2"
   }
 }

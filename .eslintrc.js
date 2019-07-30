@@ -20,6 +20,10 @@ module.exports = {
     indent: ['error', 2],
     'wrap-iife': [2, 'any'],
     'linebreak-style': ['error', 'windows'],
-    'comma-dangle': ['error', 'never']
+    'comma-dangle': ['error', 'never'],
+    'space-before-function-paren': ['error', 'never'],
+    'object-shorthand': ['error', 'never'],
+    'func-names': ['error', 'as-needed'],
+    'arrow-parens': ['error', 'as-needed']
   }
 };

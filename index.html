@@ -82,15 +82,6 @@
 
     <section class="loading-json" id="loading-json">
       <div class="loading-container">
-        <script id="loading-template" type="text/x-handlebars-template">
-          {{#each loadingContent}}
-          <div class="loading-cell">
-            <p>Title: {{title}}</p>
-            <p>Description: {{description}}</p>
-            <p>Likes: {{likes}}<p>
-            </div>
-            {{/each}}
-        </script>
         <div class="cells-container" id="cells-container"></div>
         <div class="loader" id="loader">
           <p class="loader-text">Loading...</p>
@@ -107,20 +98,6 @@
         <div class="slider-content" id="home-slider">
           <div class="slider-box">
             <div class="slider__slides slides"></div>
-            <script id="home-slider-template" type="text/x-handlebars-template">
-              {{#each homeSlides}}
-              <div class="slider_slide slide">
-                <h1 class="slide-title">{{slideTitle}}</h1>
-                <p class="slide-text">
-                  {{slideText}}
-                </p>
-                <div class="slides__buttons">
-                  <button class="btn">Explore</button>
-                  <button class="btn">Learn more</button>
-                </div>
-              </div>
-              {{/each}}
-            </script>
           </div>
           <div class="arrow-container arrow-container_left">
             <a class="slider__arrow slider__arrow_left"></a>
@@ -422,22 +399,7 @@
           <h2 class="title">Latest portfolio</h2>
           <div class="content__underline"></div>
         </div>
-        <div class="portfolios">
-          <script id="porfolio-template" type="text/x-handlebars-template">
-            {{#each portfolioItems}}
-            <div class="item-cell">
-              <div class="portfolios__item">
-                <h3 class="item-title">{{title}}</h3>
-                <p class="item-theme">{{theme}}</p>
-              </div>
-              <div class="panel">
-                <i class="panel__icon link-icon"></i>
-                <i class="panel__icon zoom-icon"></i>
-              </div>
-            </div>
-            {{/each}}
-          </script>
-        </div>
+        <div class="portfolios"></div>
         <button class="show-more-btn visible-xx-large">Show More</button>
       </div>
     </section>
@@ -579,13 +541,49 @@
     </footer>
     <!-- Footer Section End -->
 
-    <script src="/js/handlebars-v4.1.2.js"></script>
+    <script id="loading-template" type="text/x-handlebars-template">
+      <div class="loading-cell">
+        <p>Title: {{title}}</p>
+        <p>Description: {{description}}</p>
+        <p>Likes: {{likes}}<p>
+      </div>
+    </script>
+
+    <script id="home-slider-template" type="text/x-handlebars-template">
+      {{#each homeSlides}}
+      <div class="slider_slide slide">
+        <h1 class="slide-title">{{slideTitle}}</h1>
+        <p class="slide-text">
+          {{slideText}}
+        </p>
+        <div class="slides__buttons">
+          <button class="btn">Explore</button>
+          <button class="btn">Learn more</button>
+        </div>
+      </div>
+      {{/each}}
+    </script>
+
+    <script id="porfolio-template" type="text/x-handlebars-template">
+      {{#each portfolioItems}}
+      <div class="item-cell">
+        <div class="portfolios__item">
+          <h3 class="item-title">{{title}}</h3>
+          <p class="item-theme">{{theme}}</p>
+        </div>
+        <div class="panel">
+          <i class="panel__icon link-icon"></i>
+          <i class="panel__icon zoom-icon"></i>
+        </div>
+      </div>
+      {{/each}}
+    </script>
+
+    <script src="/node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="/js/data-service.js"></script>
-    <script src="/js/portfolio-handler.js"></script>
-    <script src="/js/home-slider-handler.js"></script>
+    <script src="/js/template-service.js"></script>
     <script src="/js/loading-handler.js"></script>
     <script src="/js/slider.js"></script>
-    <script src="/js/main.js"></script>   
-
+    <script src="/js/main.js"></script>
   </body>
 </html>

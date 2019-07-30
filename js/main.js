@@ -1,9 +1,14 @@
 function initSlider() {
-  DataService.getSlides()
-    .then(drawHomeSlides)
-    .then(() => new Slider('home-slider', false, true));
+  DataService.getHomeSlides()
+    .then(TemplateService.drawHomeSlides)
+    .then(() => new Slider('home-slider', false, true))
+    .then(() => new Slider('blog-slider-container', true, false));
+}
+
+function getAndDrawPortfolios() {
+  DataService.getPortfolios()
+    .then(TemplateService.drawPortfolios);
 }
 
 document.addEventListener('DOMContentLoaded', initSlider);
-
-new Slider('blog-slider-container', true, false);
+document.addEventListener('DOMContentLoaded', getAndDrawPortfolios);
