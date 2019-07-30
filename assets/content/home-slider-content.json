@@ -1,0 +1,20 @@
+{
+  "homeSlides": [
+    {
+      "slideTitle": "Explore",
+      "slideText": "Professionaly designed, carefully made for your enjoyement"
+    },
+    {
+      "slideTitle": "Divide",
+      "slideText": "Gain and maintain power by breaking up larger concentrations of power into pieces"
+    },
+    {
+      "slideTitle": "Conquer",
+      "slideText": "Overcome and take control of by military force."
+    },
+    {
+      "slideTitle": "Rule",
+      "slideText": "Control of or dominion over an area or people"
+    }
+  ]
+}

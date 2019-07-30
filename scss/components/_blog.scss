@@ -72,34 +72,29 @@
         margin: 75px 0 0;
       }
 
-      .slider__slides {
+      .blog-slider__slides {
+        overflow: hidden;
+        width: 1200px;
+        margin: 0 auto;
+
+        @include screen-x-large {
+          width: 800px;
+        }
+
+        @include screen-large {
+          width: 400px;
+        }
+
         .posts {
           font-size: 0;
-          text-align: center;
+          text-align: left;
 
           .posts__item {
             display: inline-block;
             box-sizing: border-box;
             vertical-align: top;
-            width: 33.3%;
             padding: 0 $padding-blog-posts;
             max-width: 400px;
-
-            @include screen-x-large {
-              width: 50%;
-
-              &:nth-child(n + 3) {
-                display: none;
-              }
-            }
-
-            @include screen-large {
-              width: 100%;
-
-              &:nth-child(n + 2) {
-                display: none;
-              }
-            }
 
             .folder {
               background-color: $color-blog-bg-secondary;
@@ -109,7 +104,7 @@
               margin-top: 36px;
 
               &:before {
-                content: "";
+                content: '';
                 position: absolute;
                 left: 0;
                 top: -36px;
@@ -119,7 +114,7 @@
               }
 
               &:after {
-                content: "";
+                content: '';
                 position: absolute;
                 left: 45%;
                 top: -36px;
@@ -129,6 +124,7 @@
                 border-right: 36px solid transparent;
               }
             }
+
             .post-content {
               padding: 22px 25px 26px;
               border: 1px solid $color-blog-border;
@@ -172,7 +168,7 @@
                 }
 
                 &:after {
-                  content: "";
+                  content: '';
                   display: table;
                   clear: both;
                 }
@@ -186,14 +182,14 @@
                 }
 
                 .icon-user {
-                  background: url("../../img/user_icon.png") no-repeat top left;
+                  background: url('../../img/user_icon.png') no-repeat top left;
                 }
                 .icon-calendar {
-                  background: url("../../img/calendar_icon.png") no-repeat top
+                  background: url('../../img/calendar_icon.png') no-repeat top
                     left;
                 }
                 .icon-comment {
-                  background: url("../../img/comment_icon.png") no-repeat top
+                  background: url('../../img/comment_icon.png') no-repeat top
                     left;
                 }
               }
@@ -257,9 +253,10 @@
 
         .slider__arrow {
           position: absolute;
+          cursor: pointer;
 
           &:before {
-            content: "";
+            content: '';
             display: inline-block;
             width: 20px;
             height: 20px;

@@ -1,0 +1,22 @@
+{
+  "loadingContent": [
+    {
+      "id": 1,
+      "title": "Post 1",
+      "description": "Some description...",
+      "likes": -14
+    },
+    {
+      "id": 2,
+      "title": "Post 2",
+      "description": "Some description...",
+      "likes": 1337
+    },
+    {
+      "id": 3,
+      "title": "Post 3",
+      "description": "Some description...",
+      "likes": 1312
+    }
+  ]
+}
